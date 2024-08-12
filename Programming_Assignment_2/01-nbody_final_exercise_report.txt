@@ -1,0 +1,85 @@
+Collecting data...
+19.028 Billion Interactions / second
+Processing events...
+Saving temporary "/tmp/nsys-report-ae6b-1f40-9279-ff5e.qdstrm" file to disk...
+
+Creating final output files...
+Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-ae6b-1f40-9279-ff5e.qdrep"
+Exporting 1150 events: [==================================================100%]
+
+Exported successfully to
+/tmp/nsys-report-ae6b-1f40-9279-ff5e.sqlite
+
+
+CUDA API Statistics:
+
+ Time(%)  Total Time (ns)  Num Calls    Average     Minimum   Maximum            Name         
+ -------  ---------------  ---------  ------------  -------  ----------  ---------------------
+    99.7       3204398473          3  1068132824.3     3964  3204389390  cudaMalloc           
+     0.2          7656311         10      765631.1   748994      772848  cudaDeviceSynchronize
+     0.0           739939         23       32171.3     7249       50962  cudaMemcpy           
+     0.0           184996          3       61665.3     6336      162182  cudaFree             
+     0.0            94640         10        9464.0     4881       34755  cudaLaunchKernel     
+
+
+
+CUDA Kernel Statistics:
+
+ Time(%)  Total Time (ns)  Instances  Average   Minimum  Maximum               Name             
+ -------  ---------------  ---------  --------  -------  -------  ------------------------------
+   100.0          7471903         10  747190.3   746349   748877  bodyForce(Body*, float*, int*)
+
+
+
+CUDA Memory Operation Statistics (by time):
+
+ Time(%)  Total Time (ns)  Operations  Average  Minimum  Maximum      Operation     
+ -------  ---------------  ----------  -------  -------  -------  ------------------
+    55.9           197273          13  15174.8     1024    18303  [CUDA memcpy HtoD]
+    44.1           155645          10  15564.5    15487    16032  [CUDA memcpy DtoH]
+
+
+
+CUDA Memory Operation Statistics (by size in KiB):
+
+  Total    Operations  Average  Minimum  Maximum      Operation     
+ --------  ----------  -------  -------  -------  ------------------
+  960.000          10   96.000   96.000   96.000  [CUDA memcpy DtoH]
+ 1056.008          13   81.231    0.004   96.000  [CUDA memcpy HtoD]
+
+
+
+Operating System Runtime API Statistics:
+
+ Time(%)  Total Time (ns)  Num Calls   Average    Minimum   Maximum        Name     
+ -------  ---------------  ---------  ----------  -------  ---------  --------------
+    96.6       3205896964         43  74555743.3    25410  100139061  poll          
+     3.2        106917664        665    160778.4     1014   17757580  ioctl         
+     0.1          2840256         85     33414.8     1487     796794  mmap          
+     0.1          1670444         82     20371.3     5411      46997  open64        
+     0.0          1078441         10    107844.1    14617     818610  sem_timedwait 
+     0.0           251457         28      8980.6     2124      36357  fopen         
+     0.0           202193          4     50548.3     1385      87203  fgets         
+     0.0           197194          4     49298.5    38736      59064  pthread_create
+     0.0            88800         12      7400.0     1046      62615  read          
+     0.0            83747         21      3988.0     1089      35075  fclose        
+     0.0            81525         11      7411.4     4192      12245  write         
+     0.0            72344          1     72344.0    72344      72344  writev        
+     0.0            71939          2     35969.5    10421      61518  fopen64       
+     0.0            39324          5      7864.8     3746      11035  open          
+     0.0            27992          6      4665.3     1045      11555  fgetc         
+     0.0            27326         17      1607.4     1017       5275  fcntl         
+     0.0            24546          5      4909.2     2021       7401  munmap        
+     0.0            20223          3      6741.0     2262      12006  fwrite        
+     0.0            19636          2      9818.0     8317      11319  socket        
+     0.0            17912          2      8956.0     7634      10278  fread         
+     0.0            16154          1     16154.0    16154      16154  sem_wait      
+     0.0            11987          1     11987.0    11987      11987  pipe2         
+     0.0            10903          1     10903.0    10903      10903  connect       
+     0.0             4403          1      4403.0     4403       4403  fflush        
+     0.0             2754          1      2754.0     2754       2754  bind          
+     0.0             2104          1      2104.0     2104       2104  listen        
+
+Report file moved to "/dli/task/nbody-report.qdrep"
+Report file moved to "/dli/task/nbody-report.sqlite"
