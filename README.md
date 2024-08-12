@@ -17,4 +17,4 @@
 13. NVIDIA DLI Workshop CUDA Multi-GPU Programming
 14. NVIDIA DLI Workshop CUDA Copy/Compute Overlap Considerations 
     
-Course textbook: Programming Massively Parallel Processors A Hands-on Approach (Fourth Edition)
+Course textbook: Programming Massively `Parallel Processors A Hands-on Approach (Fourth Edition)`
