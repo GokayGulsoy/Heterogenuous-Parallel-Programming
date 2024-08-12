@@ -1,0 +1,1072 @@
+==12566== NVPROF is profiling process 12566, command: ./detectnet images/myimages/*.jpg images/ssd-mobilenet-v2-output/out_%i.jpg
+==12566== Warning: Unified Memory Profiling is not supported on the underlying platform. System requirements for unified memory can be found at: http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#um-requirements
+==12566== Profiling application: ./detectnet images/myimages/*.jpg images/ssd-mobilenet-v2-output/out_%i.jpg
+==12566== Profiling result:
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"GPU activities",18.567870,295.182528,240,1.229927,0.096618,17.864328,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"GPU activities",12.644274,201.012229,200,1.005061,0.129796,37.263358,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"GPU activities",10.165846,161.611443,80,2.020143,0.575286,13.177872,"trt_maxwell_scudnn_128x32_relu_interior_nn_v0"
+"GPU activities",8.604007,136.782110,20,6.839105,4.759689,18.435759,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"GPU activities",7.890472,125.438703,20,6.271935,3.528750,17.861463,"void allClassNMS_kernel<__half, __half, int=1>(int, int, int, int, float, bool, bool, __half*, __half*, int*, __half*, int*, bool, float)"
+"GPU activities",4.369167,69.458785,41,1.694116,0.036512,8.656683,"void gpuDetectionOverlayBox<uchar3>(uchar3*, uchar3*, int, int, int, int, int, int, float4)"
+"GPU activities",3.591917,57.102463,100,0.571024,0.114016,5.460760,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"GPU activities",3.301531,52.486052,140,0.374900,0.067711,2.306872,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"GPU activities",2.348568,37.336332,140,0.266688,0.026147,1.595955,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",2.348558,37.336180,80,0.466702,0.044065,2.323435,"void cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>(cub::DeviceRadixSortPolicy<__half, int, int>::Policy700 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>*, bool=1 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>**, bool=1, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>**, int, int, int)"
+"GPU activities",2.209549,35.126288,20,1.756314,0.602214,7.064321,"trt_maxwell_scudnn_128x32_relu_small_nn_v1"
+"GPU activities",1.933186,30.732806,96,0.320133,0.001719,7.304332,"[CUDA memcpy DtoD]"
+"GPU activities",1.883055,29.935855,80,0.374198,0.150475,1.723305,"trt_maxwell_scudnn_128x64_relu_interior_nn_v1"
+"GPU activities",1.823040,28.981756,160,0.181135,0.002345,1.910761,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",1.793136,28.506357,140,0.203616,0.002814,2.183377,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",1.547394,24.599676,31,0.793537,0.001718,13.252093,"[CUDA memset]"
+"GPU activities",1.540598,24.491649,20,1.224582,0.774462,2.985184,"void gpuTensorNorm<uchar3, bool=1>(float2, uchar3*, int, float*, int, int, float, float)"
+"GPU activities",1.410675,22.426189,40,0.560654,0.060731,2.684754,"void cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>(cub::DeviceRadixSortPolicy<__half, int, int>::Policy700 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>*, bool=0 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>**, bool=1, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>**, int, int, int)"
+"GPU activities",1.277135,20.303236,60,0.338387,0.118547,1.275213,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"GPU activities",1.231030,19.570289,33,0.593039,0.000312,19.513670,"[CUDA memcpy HtoD]"
+"GPU activities",1.114559,17.718696,160,0.110741,0.024272,1.078694,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",1.055429,16.778668,60,0.279644,0.140683,0.551432,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.962485,15.301092,40,0.382527,0.167246,1.828674,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"GPU activities",0.915282,14.550693,20,0.727534,0.566223,1.278026,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=5, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.723115,11.495714,20,0.574785,0.398559,1.556422,"void permuteData_kernel<__half, unsigned int=512>(int, int, int, int, bool, __half const *, __half*)"
+"GPU activities",0.681237,10.829962,40,0.270749,0.109641,1.166093,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=7, int=2, int=20, int=20, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",0.603368,9.592037,120,0.079933,0.002500,1.750910,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"GPU activities",0.435658,6.925876,60,0.115431,0.079067,0.309388,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",0.409883,6.516115,60,0.108601,0.002500,1.471678,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.398036,6.327780,20,0.316389,0.219176,0.855663,"void prepareSortData<__half, unsigned int=512>(int, int, int, int, float, __half*, __half*, __half, int*, int*)"
+"GPU activities",0.367363,5.840145,160,0.036500,0.001771,0.967595,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.335196,5.328778,40,0.133219,0.008698,0.708052,"void cuInt8::nchwTonchw<float, __half, int=8>(float const *, __half*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.242056,3.848087,41,0.093855,0.055836,0.154174,"void gpuOverlayText<uchar3>(unsigned char*, int, GlyphCommand*, uchar3*, uchar3*, int, int, float4)"
+"GPU activities",0.215561,3.426873,240,0.014278,0.001093,0.219228,"void copy_kernel<float>(cublasCopyParams<float>)"
+"GPU activities",0.174118,2.768043,20,0.138402,0.094067,0.340067,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"GPU activities",0.172749,2.746269,20,0.137313,0.075941,0.763628,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=2, int=2, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",0.114246,1.816229,20,0.090811,0.073336,0.147246,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=4, int=1>, fused::KpqkPtrWriter<__half, int=2, int=1, int=1>, __half2, __half, int=5, int=5, int=2, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=4, int=2Type>)"
+"GPU activities",0.067243,1.069002,20,0.053450,0.048075,0.082556,"void gatherTopDetections_kernel<__half, __half, unsigned int=32>(bool, int, int, int, int, int, int const *, __half const *, __half const *, int*, __half*, __half)"
+"GPU activities",0.064298,1.022181,20,0.051109,0.042814,0.076357,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=4>, fused::KpqkPtrWriter<__half, int=2, int=2, int=2>, __half2, __half, int=3, int=7, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.063482,1.009212,120,0.008410,0.002552,0.059587,"void gridAnchorKernel<unsigned int=32>(nvinfer1::plugin::GridAnchorParameters, int, nvinfer1::plugin::ReducedDivisor, float const *, float const *, float*)"
+"GPU activities",0.060635,0.963943,120,0.008032,0.001875,0.057555,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"GPU activities",0.050712,0.806186,120,0.006718,0.002239,0.023543,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"GPU activities",0.050049,0.795661,20,0.039783,0.028334,0.103963,"void decodeBBoxes_kernel<__half, unsigned int=512>(int, nvinfer1::plugin::CodeTypeSSD, bool, int, bool, int, int, bool, __half const *, __half const *, __half*, bool)"
+"GPU activities",0.039988,0.635701,20,0.031785,0.024480,0.056929,"void cudnn::ops::add_tensor_kernel_v3<int=2, float, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, float*, cudnn::ops::add_tensor_kernel_v3<int=2, float, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",0.039451,0.627165,20,0.031358,0.023699,0.057399,"void op_generic_tensor_kernel<int=1, float, float, float, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, float*, cudnnTensorStruct, float const *, cudnnTensorStruct, float const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",0.031967,0.508198,20,0.025409,0.021564,0.037761,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=4>, fused::KpqkPtrWriter<__half, int=2, int=2, int=2>, __half2, __half, int=4, int=5, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.030588,0.486272,40,0.012156,0.005520,0.035471,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=2, int=8, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"GPU activities",0.021538,0.342407,20,0.017120,0.014376,0.024949,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=7, int=2, int=4, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"GPU activities",0.021359,0.339552,20,0.016977,0.013750,0.026616,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=4, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"GPU activities",0.019884,0.316104,40,0.007902,0.006197,0.015625,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, __half, __half, __half, float, __half>(cudnn::cnn::GroupedDirectFpropParams, __half const *, __half const *, __half*, float, __half*, __half const * const *, __half const *, cudnnActivationStruct)"
+"GPU activities",0.011133,0.176990,20,0.008849,0.006980,0.016823,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=16, int=16, int=1, int=16, int=4>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=16, int=16, int=1, int=16, int=4>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",0.010032,0.159490,20,0.007974,0.006511,0.011772,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, float, float, float, float, float>(cudnn::cnn::GroupedDirectFpropParams, float const *, float const *, float*, float, float*, float const * const *, float const *, cudnnActivationStruct)"
+"GPU activities",0.007768,0.123497,20,0.006174,0.004948,0.012553,"void cuInt8::nchwTonchw<__half, float, int=4>(__half const *, float*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.004623,0.073493,20,0.003674,0.002866,0.008281,"void cuPad::pad<__half, __half, int=128, bool=1>(__half*, nvinfer1::Dims4, cuPad::pad<__half, __half, int=128, bool=1> const *, nvinfer1, int, int, int, int, int, int, int, int, __half*rt::ReducedDivisor, __half*rt, __half*rt, float const *, float const , bool)"
+"GPU activities",0.003899,0.061984,20,0.003099,0.002240,0.006615,"void setUniformOffsets_kernel<unsigned int=32>(int, int, int*)"
+"API calls",38.790084,28123.418510,3422,8.218415,0.033855,27716.104152,"cudaLaunchKernel"
+"API calls",30.939842,22431.870614,16,1401.991913,0.004271,22428.871958,"cudaStreamCreateWithFlags"
+"API calls",10.979305,7960.167911,157,50.701706,0.011302,802.310798,"cuModuleUnload"
+"API calls",7.438134,5392.763622,14,385.197401,0.010469,5362.297002,"cudaMemGetInfo"
+"API calls",4.843254,3511.435113,81,43.351050,0.002292,2667.555325,"cudaFree"
+"API calls",2.125417,1540.960584,20,77.048029,0.627774,1321.600536,"cudaGraphicsGLRegisterBuffer"
+"API calls",1.388173,1006.447206,24,41.935300,0.023647,236.586181,"cudaStreamSynchronize"
+"API calls",0.767314,556.314883,30,18.543829,0.026824,329.358796,"cudaHostAlloc"
+"API calls",0.675674,489.874301,56,8.747755,0.021303,308.903003,"cudaMalloc"
+"API calls",0.484123,350.996615,20,17.549830,0.087710,279.460868,"cudaMemcpy2DAsync"
+"API calls",0.419432,304.094640,6,50.682440,0.039688,303.685935,"cudaMallocHost"
+"API calls",0.211865,153.605635,77,1.994878,0.047240,124.462419,"cudaMemcpyAsync"
+"API calls",0.188727,136.830022,32,4.275938,0.032293,74.968843,"cudaMemcpy"
+"API calls",0.167026,121.096520,259,0.467554,0.001093,94.653104,"cudaDeviceGetAttribute"
+"API calls",0.144316,104.631536,30,3.487717,0.054480,101.300741,"cudaMemsetAsync"
+"API calls",0.082183,59.583939,11,5.416721,0.133597,57.116598,"cudaCreateTextureObject"
+"API calls",0.072493,52.558219,40,1.313955,0.008698,26.653571,"cudaDeviceSynchronize"
+"API calls",0.061331,44.465710,11,4.042337,0.004949,44.358675,"cudaDestroyTextureObject"
+"API calls",0.047176,34.203000,21,1.628714,0.001927,33.912889,"cudaGetDevice"
+"API calls",0.041229,29.891344,26,1.149667,0.007031,29.258991,"cudaStreamDestroy"
+"API calls",0.029177,21.153933,245,0.086342,0.002187,18.212878,"cudaEventCreateWithFlags"
+"API calls",0.022338,16.195281,245,0.066103,0.002135,11.200127,"cudaEventDestroy"
+"API calls",0.020614,14.945672,176,0.084918,0.006875,6.122522,"cudaEventRecord"
+"API calls",0.017934,13.002197,33,0.394005,0.101825,2.735317,"cudaFreeHost"
+"API calls",0.011553,8.376005,9,0.930667,0.001719,5.376361,"cuDeviceGetName"
+"API calls",0.006666,4.833307,3399,0.001421,0.000521,0.222504,"cudaGetLastError"
+"API calls",0.005988,4.341600,9,0.482400,0.007604,2.553230,"cuDeviceTotalMem"
+"API calls",0.004723,3.424029,80,0.042800,0.009688,2.076032,"cudaFuncGetAttributes"
+"API calls",0.003620,2.624894,849,0.003091,0.000625,0.264484,"cuDeviceGetAttribute"
+"API calls",0.003061,2.219215,78,0.028451,0.005208,1.178149,"cudaEventElapsedTime"
+"API calls",0.002697,1.955458,160,0.012221,0.001823,0.936374,"cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags"
+"API calls",0.001155,0.837359,37,0.022631,0.001823,0.496625,"cudaGetErrorString"
+"API calls",0.001108,0.803614,12,0.066967,0.024219,0.338705,"cudaGetDeviceProperties"
+"API calls",0.000388,0.281001,30,0.009366,0.003490,0.068179,"cudaHostGetDevicePointer"
+"API calls",0.000319,0.231460,8,0.028932,0.005312,0.160263,"cuInit"
+"API calls",0.000271,0.196150,1,0.196150,0.196150,0.196150,"cudaMemset"
+"API calls",0.000203,0.147087,2,0.073543,0.057866,0.089221,"cudaStreamCreate"
+"API calls",0.000163,0.118394,120,0.000986,0.000678,0.003126,"cudaPeekAtLastError"
+"API calls",0.000142,0.103023,2,0.051511,0.005573,0.097450,"cudaDeviceGetStreamPriorityRange"
+"API calls",0.000125,0.090786,9,0.010087,0.000678,0.073179,"cudaGetDeviceCount"
+"API calls",0.000115,0.083594,11,0.007599,0.003229,0.029845,"cudaCreateChannelDesc"
+"API calls",0.000115,0.083230,8,0.010403,0.004635,0.026719,"cudaStreamCreateWithPriority"
+"API calls",0.000088,0.063491,8,0.007936,0.002239,0.014011,"cuDriverGetVersion"
+"API calls",0.000085,0.061929,2,0.030964,0.003490,0.058439,"cuDevicePrimaryCtxRelease"
+"API calls",0.000072,0.052137,8,0.006517,0.003125,0.027865,"cudaEventCreate"
+"API calls",0.000059,0.042761,7,0.006108,0.000625,0.036824,"cudaRuntimeGetVersion"
+"API calls",0.000052,0.037551,11,0.003413,0.001250,0.007187,"cuDeviceGetCount"
+"API calls",0.000031,0.022605,10,0.002260,0.000938,0.003855,"cuDeviceGet"
+"API calls",0.000028,0.020312,9,0.002256,0.000938,0.004895,"cuDeviceGetUuid"
+"API calls",0.000010,0.007396,2,0.003698,0.002032,0.005364,"cudaDriverGetVersion"
+"API calls",0.000002,0.001666,1,0.001666,0.001666,0.001666,"cuCtxGetCurrent"
+
+==12566== NVTX result:
+==12566==   Thread "<unnamed>" (id = 2190483472)
+==12566==     Domain "TensorRT"
+==12566==       Range "(Unnamed Layer* 404) [Shuffle] + BoxPredictor_0/Reshape_1"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,49.854203,20,2492.710000,65.262000,42.700412,"(Unnamed Layer* 404) [Shuffle] + BoxPredictor_0/Reshape_1"
+"GPU activities",100.000000,5.912135,20,295.606000,152.768000,1.750910,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,5.891480,20,294.574000,49.792000,4.542802,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 533) [Shuffle] + BoxPredictor_1/Reshape_1"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.787382,20,89.369000,54.897000,391.154000,"(Unnamed Layer* 533) [Shuffle] + BoxPredictor_1/Reshape_1"
+"GPU activities",100.000000,2.540635,20,127.031000,90.942000,332.671000,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1.393210,20,69.660000,43.387000,299.642000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 574) [Shuffle] + BoxPredictor_2/Reshape_1"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1214.089000,20,60.704000,48.126000,114.898000,"(Unnamed Layer* 574) [Shuffle] + BoxPredictor_2/Reshape_1"
+"GPU activities",100.000000,646.072000,20,32.303000,24.897000,56.460000,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,966.843000,20,48.342000,39.011000,93.648000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 615) [Shuffle] + BoxPredictor_3/Reshape_1"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,4650.615000,20,232.530000,56.095000,3101.054000,"(Unnamed Layer* 615) [Shuffle] + BoxPredictor_3/Reshape_1"
+"GPU activities",100.000000,283.502000,20,14.175000,11.303000,23.543000,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,3793.049000,20,189.652000,45.001000,2522.344000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 656) [Shuffle] + BoxPredictor_4/Reshape_1"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1876.597000,20,93.829000,52.188000,400.737000,"(Unnamed Layer* 656) [Shuffle] + BoxPredictor_4/Reshape_1"
+"GPU activities",100.000000,173.600000,20,8.680000,7.083000,13.750000,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1513.675000,20,75.683000,39.948000,314.485000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 697) [Shuffle] + BoxPredictor_5/Reshape_1"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,3718.358000,20,185.917000,48.595000,1925.717000,"(Unnamed Layer* 697) [Shuffle] + BoxPredictor_5/Reshape_1"
+"GPU activities",100.000000,139.070000,20,6.953000,5.625000,14.531000,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,3281.576000,20,164.078000,38.334000,1896.706000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 707) [Shuffle] + BoxPredictor_0/Reshape"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1932.072000,20,96.603000,54.220000,318.132000,"(Unnamed Layer* 707) [Shuffle] + BoxPredictor_0/Reshape"
+"GPU activities",100.000000,284.802000,20,14.240000,10.938000,33.647000,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1317.892000,20,65.894000,43.334000,154.378000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 716) [Shuffle] + BoxPredictor_1/Reshape"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1997.697000,20,99.884000,48.230000,580.064000,"(Unnamed Layer* 716) [Shuffle] + BoxPredictor_1/Reshape"
+"GPU activities",100.000000,138.808000,20,6.940000,5.052000,19.220000,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1256.849000,20,62.842000,38.490000,258.078000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 725) [Shuffle] + BoxPredictor_2/Reshape"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,2095.717000,20,104.785000,46.042000,697.879000,"(Unnamed Layer* 725) [Shuffle] + BoxPredictor_2/Reshape"
+"GPU activities",100.000000,69.585000,20,3.479000,2.500000,9.219000,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1619.149000,20,80.957000,37.189000,477.718000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 734) [Shuffle] + BoxPredictor_3/Reshape"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1308.202000,20,65.410000,48.386000,170.160000,"(Unnamed Layer* 734) [Shuffle] + BoxPredictor_3/Reshape"
+"GPU activities",100.000000,83.755000,20,4.187000,2.552000,15.626000,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1066.737000,20,53.336000,39.219000,140.628000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 743) [Shuffle] + BoxPredictor_4/Reshape"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1361.488000,20,68.074000,46.824000,178.181000,"(Unnamed Layer* 743) [Shuffle] + BoxPredictor_4/Reshape"
+"GPU activities",100.000000,63.492000,20,3.174000,2.240000,8.385000,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1130.182000,20,56.509000,38.074000,151.253000,"cudaLaunchKernel"
+
+==12566==       Range "(Unnamed Layer* 752) [Shuffle] + BoxPredictor_5/Reshape"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1472.534000,20,73.626000,45.366000,186.670000,"(Unnamed Layer* 752) [Shuffle] + BoxPredictor_5/Reshape"
+"GPU activities",100.000000,62.767000,20,3.138000,2.239000,8.386000,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1194.921000,20,59.746000,36.824000,158.597000,"cudaLaunchKernel"
+
+==12566==       Range "BoxPredictor_0/BoxEncodingPredictor/Conv2D || BoxPredictor_0/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.307890,20,0.065394,0.048334,0.139378,"BoxPredictor_0/BoxEncodingPredictor/Conv2D || BoxPredictor_0/ClassPredictor/Conv2D"
+"GPU activities",100.000000,150.380892,20,7.519044,3.149462,37.263358,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.035491,20,0.051774,0.038387,0.113335,"cudaLaunchKernel"
+
+==12566==       Range "BoxPredictor_1/BoxEncodingPredictor/Conv2D || BoxPredictor_1/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,3.341994,20,0.167099,0.052605,1.924258,"BoxPredictor_1/BoxEncodingPredictor/Conv2D || BoxPredictor_1/ClassPredictor/Conv2D"
+"GPU activities",100.000000,136.782110,20,6.839105,4.759689,18.435759,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"API calls",100.000000,2.958031,20,0.147901,0.040990,1.869309,"cudaLaunchKernel"
+
+==12566==       Range "BoxPredictor_2/BoxEncodingPredictor/Conv2D || BoxPredictor_2/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,7.017595,20,350.879000,54.324000,5.438237,"BoxPredictor_2/BoxEncodingPredictor/Conv2D || BoxPredictor_2/ClassPredictor/Conv2D"
+"GPU activities",100.000000,14.550693,20,727.534000,566.223000,1.278026,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=5, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"API calls",100.000000,5.384384,20,269.219000,44.220000,4.095241,"cudaLaunchKernel"
+
+==12566==       Range "BoxPredictor_3/BoxEncodingPredictor/Conv2D || BoxPredictor_3/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,5.172557,20,258.627000,54.064000,3867.268000,"BoxPredictor_3/BoxEncodingPredictor/Conv2D || BoxPredictor_3/ClassPredictor/Conv2D"
+"GPU activities",100.000000,6.498105,20,324.905000,253.970000,551.432000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"API calls",100.000000,4.282952,20,214.147000,44.428000,3213.451000,"cudaLaunchKernel"
+
+==12566==       Range "BoxPredictor_4/BoxEncodingPredictor/Conv2D || BoxPredictor_4/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,2.044316,20,102.215000,50.001000,421.206000,"BoxPredictor_4/BoxEncodingPredictor/Conv2D || BoxPredictor_4/ClassPredictor/Conv2D"
+"GPU activities",100.000000,6.544042,20,327.202000,264.439000,548.357000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"API calls",100.000000,1.739515,20,86.975000,41.095000,359.382000,"cudaLaunchKernel"
+
+==12566==       Range "BoxPredictor_5/BoxEncodingPredictor/Conv2D || BoxPredictor_5/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.768058,20,88.402000,50.834000,376.830000,"BoxPredictor_5/BoxEncodingPredictor/Conv2D || BoxPredictor_5/ClassPredictor/Conv2D"
+"GPU activities",100.000000,3.736521,20,186.826000,140.683000,469.605000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"API calls",100.000000,1.493416,20,74.670000,41.719000,320.476000,"cudaLaunchKernel"
+
+==12566==       Range "Const"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ns,,ns,ns,ns,
+"Range:",100.000000,66146.000000,20,3307.000000,1562.000000,10052.000000,"Const"
+No kernels were profiled in this range.
+No API activities were profiled in this range.
+
+==12566==       Range "ExecutionContext::execute"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,34088.787657,20,1704.439382,39.309769,31451.232438,"ExecutionContext::execute"
+"GPU activities",20.598935,295.182528,240,1.229927,0.096618,17.864328,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"GPU activities",14.027381,201.012229,200,1.005061,0.129796,37.263358,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"GPU activities",11.277848,161.611443,80,2.020143,0.575286,13.177872,"trt_maxwell_scudnn_128x32_relu_interior_nn_v0"
+"GPU activities",9.545165,136.782110,20,6.839105,4.759689,18.435759,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"GPU activities",8.753580,125.438703,20,6.271935,3.528750,17.861463,"void allClassNMS_kernel<__half, __half, int=1>(int, int, int, int, float, bool, bool, __half*, __half*, int*, __half*, int*, bool, float)"
+"GPU activities",3.984822,57.102463,100,0.571024,0.114016,5.460760,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"GPU activities",3.662672,52.486052,140,0.374900,0.067711,2.306872,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"GPU activities",2.605468,37.336332,140,0.266688,0.026147,1.595955,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",2.605458,37.336180,80,0.466702,0.044065,2.323435,"void cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>(cub::DeviceRadixSortPolicy<__half, int, int>::Policy700 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>*, bool=1 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>**, bool=1, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>**, int, int, int)"
+"GPU activities",2.451243,35.126288,20,1.756314,0.602214,7.064321,"trt_maxwell_scudnn_128x32_relu_small_nn_v1"
+"GPU activities",2.089035,29.935855,80,0.374198,0.150475,1.723305,"trt_maxwell_scudnn_128x64_relu_interior_nn_v1"
+"GPU activities",2.022455,28.981756,160,0.181135,0.002345,1.910761,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",1.989280,28.506357,140,0.203616,0.002814,2.183377,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",1.564983,22.426189,40,0.560654,0.060731,2.684754,"void cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>(cub::DeviceRadixSortPolicy<__half, int, int>::Policy700 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>*, bool=0 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>**, bool=1, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>**, int, int, int)"
+"GPU activities",1.416835,20.303236,60,0.338387,0.118547,1.275213,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"GPU activities",1.236477,17.718696,160,0.110741,0.024272,1.078694,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",1.170878,16.778668,60,0.279644,0.140683,0.551432,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",1.109944,15.905488,58,0.274232,0.001719,7.291779,"[CUDA memcpy DtoD]"
+"GPU activities",1.067767,15.301092,40,0.382527,0.167246,1.828674,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"GPU activities",1.015402,14.550693,20,0.727534,0.566223,1.278026,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=5, int=7, int=4, int=3, int=3, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.802214,11.495714,20,0.574785,0.398559,1.556422,"void permuteData_kernel<__half, unsigned int=512>(int, int, int, int, bool, __half const *, __half*)"
+"GPU activities",0.755755,10.829962,40,0.270749,0.109641,1.166093,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=7, int=2, int=20, int=20, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",0.669368,9.592037,120,0.079933,0.002500,1.750910,"void genericReformat::copyPackedKernel<float, float, bool=0, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"GPU activities",0.483313,6.925876,60,0.115431,0.079067,0.309388,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",0.454719,6.516115,60,0.108601,0.002500,1.471678,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.441576,6.327780,20,0.316389,0.219176,0.855663,"void prepareSortData<__half, unsigned int=512>(int, int, int, int, float, __half*, __half*, __half, int*, int*)"
+"GPU activities",0.407547,5.840145,160,0.036500,0.001771,0.967595,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.371862,5.328778,40,0.133219,0.008698,0.708052,"void cuInt8::nchwTonchw<float, __half, int=8>(float const *, __half*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.239140,3.426873,240,0.014278,0.001093,0.219228,"void copy_kernel<float>(cublasCopyParams<float>)"
+"GPU activities",0.193164,2.768043,20,0.138402,0.094067,0.340067,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"GPU activities",0.191645,2.746269,20,0.137313,0.075941,0.763628,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=2, int=2, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",0.126743,1.816229,20,0.090811,0.073336,0.147246,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=4, int=1>, fused::KpqkPtrWriter<__half, int=2, int=1, int=1>, __half2, __half, int=5, int=5, int=2, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=4, int=2Type>)"
+"GPU activities",0.074599,1.069002,20,0.053450,0.048075,0.082556,"void gatherTopDetections_kernel<__half, __half, unsigned int=32>(bool, int, int, int, int, int, int const *, __half const *, __half const *, int*, __half*, __half)"
+"GPU activities",0.071332,1.022181,20,0.051109,0.042814,0.076357,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=4>, fused::KpqkPtrWriter<__half, int=2, int=2, int=2>, __half2, __half, int=3, int=7, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.070427,1.009212,120,0.008410,0.002552,0.059587,"void gridAnchorKernel<unsigned int=32>(nvinfer1::plugin::GridAnchorParameters, int, nvinfer1::plugin::ReducedDivisor, float const *, float const *, float*)"
+"GPU activities",0.067268,0.963943,120,0.008032,0.001875,0.057555,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"GPU activities",0.056259,0.806186,120,0.006718,0.002239,0.023543,"void genericReformat::copyPackedKernel<float, float, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"GPU activities",0.055524,0.795661,20,0.039783,0.028334,0.103963,"void decodeBBoxes_kernel<__half, unsigned int=512>(int, nvinfer1::plugin::CodeTypeSSD, bool, int, bool, int, int, bool, __half const *, __half const *, __half*, bool)"
+"GPU activities",0.044362,0.635701,20,0.031785,0.024480,0.056929,"void cudnn::ops::add_tensor_kernel_v3<int=2, float, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, float*, cudnn::ops::add_tensor_kernel_v3<int=2, float, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",0.043766,0.627165,20,0.031358,0.023699,0.057399,"void op_generic_tensor_kernel<int=1, float, float, float, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, float*, cudnnTensorStruct, float const *, cudnnTensorStruct, float const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",0.035464,0.508198,20,0.025409,0.021564,0.037761,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=4>, fused::KpqkPtrWriter<__half, int=2, int=2, int=2>, __half2, __half, int=4, int=5, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"GPU activities",0.033934,0.486272,40,0.012156,0.005520,0.035471,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=2, int=8, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"GPU activities",0.023894,0.342407,20,0.017120,0.014376,0.024949,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=7, int=2, int=4, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"GPU activities",0.023695,0.339552,20,0.016977,0.013750,0.026616,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=4, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"GPU activities",0.022059,0.316104,40,0.007902,0.006197,0.015625,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, __half, __half, __half, float, __half>(cudnn::cnn::GroupedDirectFpropParams, __half const *, __half const *, __half*, float, __half*, __half const * const *, __half const *, cudnnActivationStruct)"
+"GPU activities",0.012351,0.176990,20,0.008849,0.006980,0.016823,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=16, int=16, int=1, int=16, int=4>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=16, int=16, int=1, int=16, int=4>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",0.011130,0.159490,20,0.007974,0.006511,0.011772,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, float, float, float, float, float>(cudnn::cnn::GroupedDirectFpropParams, float const *, float const *, float*, float, float*, float const * const *, float const *, cudnnActivationStruct)"
+"GPU activities",0.008618,0.123497,20,0.006174,0.004948,0.012553,"void cuInt8::nchwTonchw<__half, float, int=4>(__half const *, float*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.005129,0.073493,20,0.003674,0.002866,0.008281,"void cuPad::pad<__half, __half, int=128, bool=1>(__half*, nvinfer1::Dims4, cuPad::pad<__half, __half, int=128, bool=1> const *, nvinfer1, int, int, int, int, int, int, int, int, __half*rt::ReducedDivisor, __half*rt, __half*rt, float const *, float const , bool)"
+"GPU activities",0.004325,0.061984,20,0.003099,0.002240,0.006615,"void setUniformOffsets_kernel<unsigned int=32>(int, int, int*)"
+"GPU activities",0.003191,0.045730,20,0.002286,0.001718,0.004270,"[CUDA memset]"
+"API calls",98.749640,28109.190147,3320,8.466623,0.033855,27716.104152,"cudaLaunchKernel"
+"API calls",1.233077,350.996615,20,17.549830,0.087710,279.460868,"cudaMemcpy2DAsync"
+"API calls",0.011098,3.159182,38,0.083136,0.047240,0.196097,"cudaMemcpyAsync"
+"API calls",0.006185,1.760556,20,0.088027,0.054480,0.414019,"cudaMemsetAsync"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/Conv/Conv2D + PWN(FeatureExtractor/MobilenetV2/Conv/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,245.580435,20,12.279021,120.159000,168.531549,"FeatureExtractor/MobilenetV2/Conv/Conv2D + PWN(FeatureExtractor/MobilenetV2/Conv/Relu6)"
+"GPU activities",100.000000,35.126288,20,1.756314,602.214000,7.064321,"trt_maxwell_scudnn_128x32_relu_small_nn_v1"
+"API calls",100.000000,5.614805,20,0.280740,82.710000,3.426321,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/Conv_1/Conv2D + PWN(FeatureExtractor/MobilenetV2/Conv_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.665038,20,83.251000,55.730000,0.188493,"FeatureExtractor/MobilenetV2/Conv_1/Conv2D + PWN(FeatureExtractor/MobilenetV2/Conv_1/Relu6)"
+"GPU activities",100.000000,8.572042,20,428.602000,304.961000,1.166144,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.322059,20,66.102000,43.699000,0.167608,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,12.160878,20,0.608043,79.169000,8.353090,"FeatureExtractor/MobilenetV2/expanded_conv/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv/depthwise/Relu6)"
+"GPU activities",100.000000,46.597621,20,2.329881,866.392000,8.838878,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,6.516853,20,0.325842,58.126000,4.883798,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,5.398917,20,0.269945,71.668000,3.496166,"FeatureExtractor/MobilenetV2/expanded_conv/project/Conv2D"
+"GPU activities",100.000000,31.003604,20,1.550180,575.286000,5.909843,"trt_maxwell_scudnn_128x32_relu_interior_nn_v0"
+"API calls",100.000000,4.012375,20,0.200618,54.011000,2.577658,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_1/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_1/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.701442,20,0.085072,0.052866,0.271932,"FeatureExtractor/MobilenetV2/expanded_conv_1/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_1/depthwise/Relu6)"
+"GPU activities",100.000000,73.198333,20,3.659916,1.481212,17.864328,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.357421,20,0.067871,0.040730,0.209379,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_1/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_1/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.759462,20,0.087973,0.056043,0.283808,"FeatureExtractor/MobilenetV2/expanded_conv_1/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_1/expand/Relu6)"
+"GPU activities",100.000000,69.246226,20,3.462311,1.278077,13.177872,"trt_maxwell_scudnn_128x32_relu_interior_nn_v0"
+"API calls",100.000000,1.267008,20,0.063350,0.043387,0.214484,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_1/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,4.383166,20,219.158000,59.481000,2.703962,"FeatureExtractor/MobilenetV2/expanded_conv_1/project/Conv2D"
+"GPU activities",100.000000,15.611419,20,780.570000,316.212000,4.312638,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"API calls",100.000000,3.921126,20,196.056000,45.783000,2.650315,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_10/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_10/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.434197,20,71.709000,47.189000,0.224848,"FeatureExtractor/MobilenetV2/expanded_conv_10/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_10/depthwise/Relu6)"
+"GPU activities",100.000000,13.051305,20,652.565000,264.230000,3.053832,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.149190,20,57.459000,37.293000,0.187504,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_10/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_10/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.369452,20,68.472000,49.167000,0.173076,"FeatureExtractor/MobilenetV2/expanded_conv_10/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_10/expand/Relu6)"
+"GPU activities",100.000000,7.443765,20,372.188000,150.475000,1.710544,"trt_maxwell_scudnn_128x64_relu_interior_nn_v1"
+"API calls",100.000000,1.078827,20,53.941000,37.709000,0.138649,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_10/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,5.330111,20,266.505000,59.845000,3.888934,"FeatureExtractor/MobilenetV2/expanded_conv_10/project/Conv2D"
+"GPU activities",100.000000,5.620927,20,281.046000,118.547000,1.275213,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,4.310819,20,215.540000,46.355000,3.212202,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,30628.259235,20,1531412.961000,366.518000,30089.089312,"FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/Relu6)"
+"GPU activities",41.067635,7.869358,20,393.467000,139.537000,1.595955,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",30.640437,5.871304,20,293.565000,111.203000,1.161718,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=7, int=2, int=20, int=20, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",28.291928,5.421284,20,271.064000,99.119000,1.078694,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"API calls",100.000000,27734.393438,60,462239.890000,52.345000,27716.104152,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_11/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_11/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,5.473030,20,273.651000,56.824000,4.120919,"FeatureExtractor/MobilenetV2/expanded_conv_11/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_11/expand/Relu6)"
+"GPU activities",100.000000,8.215258,20,410.762000,169.174000,1.893625,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,5.072812,20,253.640000,44.376000,4.048886,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_11/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_11/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,53.285474,20,2664.273000,69.376000,51.367882,"FeatureExtractor/MobilenetV2/expanded_conv_11/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_11/add"
+"GPU activities",100.000000,7.583876,20,379.193000,168.340000,1.775911,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"API calls",100.000000,3.904037,20,195.201000,50.418000,2.565730,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,156.209733,20,7810.486000,217.661000,149.854863,"FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/Relu6)"
+"GPU activities",40.993222,6.586276,20,329.313000,139.381000,1.592674,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",30.862868,4.958658,20,247.932000,109.641000,1.166093,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=7, int=2, int=20, int=20, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",28.143910,4.521810,20,226.090000,98.650000,1.075776,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"API calls",100.000000,4.048987,60,67.483000,40.886000,0.279797,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_12/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_12/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,2.200774,20,110.038000,54.793000,0.759182,"FeatureExtractor/MobilenetV2/expanded_conv_12/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_12/expand/Relu6)"
+"GPU activities",100.000000,7.920612,20,396.030000,168.289000,1.907116,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.584720,20,79.236000,41.095000,0.450635,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_12/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_12/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.743058,20,87.152000,61.981000,0.192608,"FeatureExtractor/MobilenetV2/expanded_conv_12/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_12/add"
+"GPU activities",100.000000,7.717216,20,385.860000,167.246000,1.828674,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"API calls",100.000000,1.226951,20,61.347000,44.532000,0.154639,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,6.905452,20,345.272000,230.109000,0.953613,"FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/Relu6)"
+"GPU activities",52.417970,4.720310,20,236.015000,122.192000,1.429125,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",30.496693,2.746269,20,137.313000,75.941000,0.763628,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=2, int=2, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",17.085337,1.538558,20,76.927000,43.491000,0.365328,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"API calls",100.000000,4.483268,60,74.721000,42.501000,0.330684,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_13/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_13/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.398462,20,69.923000,53.543000,0.153805,"FeatureExtractor/MobilenetV2/expanded_conv_13/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_13/expand/Relu6)"
+"GPU activities",100.000000,7.879250,20,393.962000,169.174000,1.884875,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.098980,20,54.949000,42.606000,0.124169,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_13/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,3.367103,20,168.355000,65.210000,1839.726000,"FeatureExtractor/MobilenetV2/expanded_conv_13/project/Conv2D"
+"GPU activities",100.000000,2.768043,20,138.402000,94.067000,340.067000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"API calls",100.000000,2.963133,20,148.156000,50.418000,1793.005000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,6.353309,20,317.665000,223.546000,929.811000,"FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/Relu6)"
+"GPU activities",59.487654,5.925106,20,296.255000,201.259000,791.440000,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",23.715130,2.362081,20,118.104000,80.316000,309.388000,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",16.797216,1.673041,20,83.652000,55.939000,219.697000,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"API calls",100.000000,3.923567,60,65.392000,41.147000,270.371000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_14/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_14/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.552268,20,77.613000,52.084000,281.568000,"FeatureExtractor/MobilenetV2/expanded_conv_14/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_14/expand/Relu6)"
+"GPU activities",100.000000,4.084556,20,204.227000,139.485000,529.971000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.258517,20,62.925000,40.834000,250.891000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_14/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_14/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.558575,20,77.928000,58.335000,145.419000,"FeatureExtractor/MobilenetV2/expanded_conv_14/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_14/add"
+"GPU activities",100.000000,4.141589,20,207.079000,142.611000,533.878000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.166742,20,58.337000,44.271000,120.471000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,6.098928,20,304.946000,215.473000,586.366000,"FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/Relu6)"
+"GPU activities",59.771889,5.787076,20,289.353000,200.113000,791.441000,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",23.561341,2.281194,20,114.059000,79.067000,307.825000,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",16.666770,1.613666,20,80.683000,55.575000,220.010000,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"API calls",100.000000,3.584240,60,59.737000,41.667000,104.950000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_15/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_15/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.488884,20,74.444000,51.824000,238.130000,"FeatureExtractor/MobilenetV2/expanded_conv_15/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_15/expand/Relu6)"
+"GPU activities",100.000000,3.787666,20,189.383000,129.796000,515.804000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.044657,20,52.232000,40.209000,113.597000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_15/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_15/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.465390,20,73.269000,55.782000,123.231000,"FeatureExtractor/MobilenetV2/expanded_conv_15/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_15/add"
+"GPU activities",100.000000,4.206951,20,210.347000,145.006000,553.723000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.115594,20,55.779000,43.542000,100.106000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,37.201028,20,1860.051000,207.296000,31607.527000,"FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/Relu6)"
+"GPU activities",59.593771,5.775047,20,288.752000,199.748000,791.858000,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",23.554579,2.282601,20,114.130000,79.274000,307.566000,"void conv2d_c1_k1_nchw_shmem_tiling_kernel<__half, float, int=3, int=3, int=1, int=1, int=2, int=2, int=10, int=10, int=8, bool=1, bool=1>(cudnnTensorStruct, __half const *, cudnnFilterStruct, __half const *, cudnnConvolutionStruct, cudnnTensorStruct, __half*, float, float, cudnn::reduced_divisor)"
+"GPU activities",16.851650,1.633041,20,81.652000,55.523000,220.687000,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"API calls",100.000000,34.929679,60,582.161000,42.136000,31242.154000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_16/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_16/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.561178,20,78.058000,52.397000,208.285000,"FeatureExtractor/MobilenetV2/expanded_conv_16/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_16/expand/Relu6)"
+"GPU activities",100.000000,3.780896,20,189.044000,129.902000,516.013000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.216122,20,60.806000,40.418000,186.411000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_16/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.714042,20,85.702000,52.865000,164.066000,"FeatureExtractor/MobilenetV2/expanded_conv_16/project/Conv2D"
+"GPU activities",100.000000,6.614559,20,330.727000,235.947000,827.067000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.304768,20,65.238000,40.730000,144.431000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_2/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_2/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,1.665664,20,0.083283,49.376000,0.340372,"FeatureExtractor/MobilenetV2/expanded_conv_2/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_2/depthwise/Relu6)"
+"GPU activities",100.000000,47.874508,20,2.393725,999.836000,11.965787,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.335655,20,0.066782,38.907000,0.283235,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_2/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_2/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,1.943113,20,0.097155,50.522000,0.355112,"FeatureExtractor/MobilenetV2/expanded_conv_2/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_2/expand/Relu6)"
+"GPU activities",100.000000,30.626767,20,1.531338,627.110000,8.221300,"trt_maxwell_scudnn_128x32_relu_interior_nn_v0"
+"API calls",100.000000,1.560243,20,0.078012,39.428000,0.294173,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_2/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_2/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,2.009730,20,0.100486,51.824000,0.450270,"FeatureExtractor/MobilenetV2/expanded_conv_2/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_2/add"
+"GPU activities",100.000000,20.993420,20,1.049671,439.758000,5.460760,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"API calls",100.000000,1.560450,20,0.078022,39.533000,0.393654,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_3/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_3/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,1.428779,20,0.071438,51.199000,0.271256,"FeatureExtractor/MobilenetV2/expanded_conv_3/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_3/depthwise/Relu6)"
+"GPU activities",100.000000,29.887983,20,1.494399,690.708000,6.830353,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.120647,20,0.056032,40.626000,0.217504,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_3/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_3/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,1.978999,20,0.098949,51.043000,0.477146,"FeatureExtractor/MobilenetV2/expanded_conv_3/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_3/expand/Relu6)"
+"GPU activities",100.000000,30.734846,20,1.536742,627.372000,8.238228,"trt_maxwell_scudnn_128x32_relu_interior_nn_v0"
+"API calls",100.000000,1.555501,20,0.077775,39.689000,0.463863,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_3/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.569978,20,78.498000,49.480000,0.259797,"FeatureExtractor/MobilenetV2/expanded_conv_3/project/Conv2D"
+"GPU activities",100.000000,5.674314,20,283.715000,114.016000,1.306098,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"API calls",100.000000,1.214711,20,60.735000,38.438000,0.210316,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_4/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_4/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.333308,20,66.665000,49.324000,0.190525,"FeatureExtractor/MobilenetV2/expanded_conv_4/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_4/depthwise/Relu6)"
+"GPU activities",100.000000,16.821368,20,841.068000,325.066000,4.536293,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.041691,20,52.084000,38.960000,0.154847,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_4/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_4/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,4.684054,20,234.202000,53.855000,3.341632,"FeatureExtractor/MobilenetV2/expanded_conv_4/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_4/expand/Relu6)"
+"GPU activities",100.000000,10.221332,20,511.066000,210.791000,2.306872,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,4.332280,20,216.614000,41.251000,3.284860,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_4/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_4/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.626856,20,81.342000,51.616000,0.251203,"FeatureExtractor/MobilenetV2/expanded_conv_4/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_4/add"
+"GPU activities",100.000000,7.395951,20,369.797000,159.642000,1.652052,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"API calls",100.000000,1.239503,20,61.975000,39.271000,0.208285,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_5/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_5/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.416490,20,70.824000,49.481000,0.251828,"FeatureExtractor/MobilenetV2/expanded_conv_5/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_5/depthwise/Relu6)"
+"GPU activities",100.000000,16.896942,20,844.847000,327.254000,4.545825,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.091531,20,54.576000,39.115000,0.195368,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_5/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_5/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.405757,20,70.287000,50.001000,0.222244,"FeatureExtractor/MobilenetV2/expanded_conv_5/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_5/expand/Relu6)"
+"GPU activities",100.000000,10.104715,20,505.235000,211.676000,2.302393,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.056796,20,52.839000,37.761000,0.178285,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_5/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_5/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.568934,20,78.446000,48.959000,0.231098,"FeatureExtractor/MobilenetV2/expanded_conv_5/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_5/add"
+"GPU activities",100.000000,7.427359,20,371.367000,159.538000,1.669136,"trt_maxwell_scudnn_128x32_relu_interior_nn_v1"
+"API calls",100.000000,1.221069,20,61.053000,37.866000,0.183494,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_6/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_6/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.505188,20,75.259000,48.803000,0.242349,"FeatureExtractor/MobilenetV2/expanded_conv_6/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_6/depthwise/Relu6)"
+"GPU activities",100.000000,9.174622,20,458.731000,204.644000,2.009724,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.213151,20,60.657000,38.490000,0.186567,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_6/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_6/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.444455,20,72.222000,49.271000,0.276152,"FeatureExtractor/MobilenetV2/expanded_conv_6/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_6/expand/Relu6)"
+"GPU activities",100.000000,10.100243,20,505.012000,209.802000,2.304529,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.147110,20,57.355000,38.022000,0.230838,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_6/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.440762,20,72.038000,49.168000,289.433000,"FeatureExtractor/MobilenetV2/expanded_conv_6/project/Conv2D"
+"GPU activities",100.000000,3.418642,20,170.932000,67.711000,815.140000,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.123565,20,56.178000,37.397000,241.932000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_7/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_7/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.218414,20,60.920000,48.647000,0.145941,"FeatureExtractor/MobilenetV2/expanded_conv_7/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_7/depthwise/Relu6)"
+"GPU activities",100.000000,13.045054,20,652.252000,263.606000,3.046540,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,0.951580,20,47.579000,38.230000,0.109950,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_7/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_7/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,3.549295,20,177.464000,55.262000,2.307027,"FeatureExtractor/MobilenetV2/expanded_conv_7/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_7/expand/Relu6)"
+"GPU activities",100.000000,7.506950,20,375.347000,156.517000,1.716379,"trt_maxwell_scudnn_128x64_relu_interior_nn_v1"
+"API calls",100.000000,3.199962,20,159.998000,42.605000,2.254057,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_7/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_7/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.278409,20,63.920000,50.314000,0.137502,"FeatureExtractor/MobilenetV2/expanded_conv_7/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_7/add"
+"GPU activities",100.000000,6.244279,20,312.213000,125.369000,1.438709,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,0.984029,20,49.201000,38.178000,0.117867,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_8/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_8/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.241902,20,62.095000,46.824000,0.172712,"FeatureExtractor/MobilenetV2/expanded_conv_8/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_8/depthwise/Relu6)"
+"GPU activities",100.000000,13.023228,20,651.161000,264.490000,3.042165,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,0.978819,20,48.940000,36.459000,0.133127,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_8/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_8/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.431852,20,71.592000,48.960000,0.176149,"FeatureExtractor/MobilenetV2/expanded_conv_8/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_8/expand/Relu6)"
+"GPU activities",100.000000,7.474441,20,373.722000,153.184000,1.722159,"trt_maxwell_scudnn_128x64_relu_interior_nn_v1"
+"API calls",100.000000,1.072051,20,53.602000,37.500000,0.147034,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_8/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_8/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.265288,20,63.264000,46.824000,0.169743,"FeatureExtractor/MobilenetV2/expanded_conv_8/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_8/add"
+"GPU activities",100.000000,6.241523,20,312.076000,125.891000,1.434282,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,0.975751,20,48.787000,35.834000,0.135212,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_9/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_9/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.325758,20,66.287000,48.908000,0.196359,"FeatureExtractor/MobilenetV2/expanded_conv_9/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_9/depthwise/Relu6)"
+"GPU activities",100.000000,13.125575,20,656.278000,263.814000,3.042686,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.034293,20,51.714000,38.542000,0.147399,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_9/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_9/expand/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.381590,20,69.079000,50.105000,0.203754,"FeatureExtractor/MobilenetV2/expanded_conv_9/expand/Conv2D + PWN(FeatureExtractor/MobilenetV2/expanded_conv_9/expand/Relu6)"
+"GPU activities",100.000000,7.510699,20,375.534000,154.746000,1.723305,"trt_maxwell_scudnn_128x64_relu_interior_nn_v1"
+"API calls",100.000000,1.080280,20,54.014000,38.021000,0.168545,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/expanded_conv_9/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_9/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.337475,20,66.873000,48.074000,0.177868,"FeatureExtractor/MobilenetV2/expanded_conv_9/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_9/add"
+"GPU activities",100.000000,6.155318,20,307.765000,124.172000,1.416780,"trt_maxwell_scudnn_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.042052,20,52.102000,36.407000,0.142034,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_2_1x1_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_2_1x1_256/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.814620,20,90.731000,52.865000,489.281000,"FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_2_1x1_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_2_1x1_256/Relu6)"
+"GPU activities",100.000000,6.110267,20,305.513000,226.000000,624.506000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.365597,20,68.279000,40.625000,373.184000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_3_1x1_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_3_1x1_128/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,8.339545,20,416.977000,56.928000,6861.548000,"FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_3_1x1_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_3_1x1_128/Relu6)"
+"GPU activities",100.000000,1.022181,20,51.109000,42.814000,76.357000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=4>, fused::KpqkPtrWriter<__half, int=2, int=2, int=2>, __half2, __half, int=3, int=7, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"API calls",100.000000,7.242181,20,362.109000,46.511000,6201.273000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_4_1x1_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_4_1x1_128/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,26089.341000,20,1304.467000,56.615000,18737.783000,"FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_4_1x1_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_4_1x1_128/Relu6)"
+"GPU activities",100.000000,339.552000,20,16.977000,13.750000,26.616000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=4, int=4, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"API calls",100.000000,5914.602000,20,295.730000,45.782000,4801.766000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_5_1x1_64/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_5_1x1_64/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,7021.971000,20,351.098000,55.731000,5388.132000,"FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_5_1x1_64/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_1_Conv2d_5_1x1_64/Relu6)"
+"GPU activities",100.000000,335.589000,20,16.779000,13.490000,35.471000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=2, int=8, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"API calls",100.000000,6032.107000,20,301.605000,45.730000,4774.890000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,17.319004,20,865.950000,56.824000,15579.696000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Relu6)"
+"GPU activities",100.000000,1.816229,20,90.811000,73.336000,147.246000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=4, int=1>, fused::KpqkPtrWriter<__half, int=2, int=1, int=1>, __half2, __half, int=5, int=5, int=2, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=4, int=2Type>)"
+"API calls",100.000000,6.527373,20,326.368000,45.469000,5373.861000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,2.056970,20,102.848000,57.137000,758.818000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/Relu6)"
+"GPU activities",100.000000,2.485989,20,124.299000,96.618000,222.822000,"void cuDepthwise::depthwiseConvFP32Kernel<int=3, int=3>(bool, int, int, int, int, float const *, int, int, float const , int, int, int, int, int, int, int, int, float*, nvinfer1::rt::ReducedDivisor, nvinfer1::rt, int, float, float, float const )"
+"API calls",100.000000,1.084345,20,54.217000,44.740000,89.898000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,3990.445000,20,199.522000,56.981000,2713.546000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Relu6)"
+"GPU activities",100.000000,508.198000,20,25.409000,21.564000,37.761000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=1, int=4>, fused::KpqkPtrWriter<__half, int=2, int=2, int=2>, __half2, __half, int=4, int=5, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=1, int=2Type>)"
+"API calls",100.000000,2745.989000,20,137.299000,46.356000,1729.515000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,36792.583000,20,1839.629000,257.974000,17419.318000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/Relu6)"
+"GPU activities",45.271369,673.159000,20,33.657000,26.147000,59.430000,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",43.593160,648.205000,20,32.410000,24.949000,58.909000,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",11.135471,165.578000,20,8.278000,6.771000,12.709000,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, __half, __half, __half, float, __half>(cudnn::cnn::GroupedDirectFpropParams, __half const *, __half const *, __half*, float, __half*, __half const * const *, __half const *, cudnnActivationStruct)"
+"API calls",100.000000,4666.965000,60,77.782000,43.386000,452.821000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,6809.358000,20,340.467000,61.511000,5310.162000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Relu6)"
+"GPU activities",100.000000,342.407000,20,17.120000,14.376000,24.949000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=7, int=2, int=4, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"API calls",100.000000,5773.662000,20,288.683000,49.064000,4600.095000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,8446.632000,20,422.331000,245.318000,2196.243000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/Relu6)"
+"GPU activities",44.693523,635.701000,20,31.785000,24.480000,56.929000,"void cudnn::ops::add_tensor_kernel_v3<int=2, float, float, int=128, int=1, int=1, int=4, int=2>(cudnnTensorStruct, float*, cudnn::ops::add_tensor_kernel_v3<int=2, float, float, int=128, int=1, int=1, int=4, int=2>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",44.093392,627.165000,20,31.358000,23.699000,57.399000,"void op_generic_tensor_kernel<int=1, float, float, float, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, float*, cudnnTensorStruct, float const *, cudnnTensorStruct, float const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",11.213086,159.490000,20,7.974000,6.511000,11.772000,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, float, float, float, float, float>(cudnn::cnn::GroupedDirectFpropParams, float const *, float const *, float*, float, float*, float const * const *, float const *, cudnnActivationStruct)"
+"API calls",100.000000,4383.217000,60,73.053000,48.126000,300.579000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1810.871000,20,90.543000,53.543000,378.706000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Relu6)"
+"GPU activities",100.000000,150.683000,20,7.534000,5.520000,19.793000,"void fused::fusedConvolutionReluKernel<fused::SrcChwcPtr_FltTex_Reader<__half, int=2, int=2, int=2, int=2>, fused::KpqkPtrWriter<__half, int=2, int=2, int=1>, __half2, __half, int=2, int=8, int=8, int=1, int=1, int=1, int=1>(fused::ConvolutionParams<__halfSrcType, int=2, int=2Type>)"
+"API calls",100.000000,1496.175000,20,74.808000,44.167000,327.715000,"cudaLaunchKernel"
+
+==12566==       Range "FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,15401.879000,20,770.093000,298.183000,6873.423000,"FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/Relu6)"
+"GPU activities",62.526026,669.091000,20,33.454000,24.272000,95.004000,"void op_generic_tensor_kernel<int=1, __half, float, __half, int=256, cudnnGenericOp_t=9, cudnnNanPropagation_t=1, int=1>(cudnnTensorStruct, __half*, cudnnTensorStruct, __half const *, cudnnTensorStruct, __half const *, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)"
+"GPU activities",16.539576,176.990000,20,8.849000,6.980000,16.823000,"void cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=16, int=16, int=1, int=16, int=4>(cudnnTensorStruct, __half*, cudnn::ops::add_tensor_kernel_v3<int=2, __half, float, int=16, int=16, int=1, int=16, int=4>, cudnnTensorStruct const *, float, cudnnTensorStruct const *, int, int, int)"
+"GPU activities",14.066536,150.526000,20,7.526000,6.197000,15.625000,"void cudnn::cnn::conv2d_grouped_direct_kernel<bool=0, bool=1, bool=0, bool=0, int=1, int=3, int, float, __half, __half, __half, float, __half>(cudnn::cnn::GroupedDirectFpropParams, __half const *, __half const *, __half*, float, __half*, __half const * const *, __half const *, cudnnActivationStruct)"
+"GPU activities",6.867863,73.493000,20,3.674000,2.866000,8.281000,"void cuPad::pad<__half, __half, int=128, bool=1>(__half*, nvinfer1::Dims4, cuPad::pad<__half, __half, int=128, bool=1> const *, nvinfer1, int, int, int, int, int, int, int, int, __half*rt::ReducedDivisor, __half*rt, __half*rt, float const *, float const , bool)"
+"API calls",100.000000,11051.160000,80,138.139000,42.969000,4572.491000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,69.135850,20,3456.792000,283.027000,48653.763000,"GridAnchor"
+"GPU activities",100.000000,1.009212,120,8.410000,2.552000,59.587000,"void gridAnchorKernel<unsigned int=32>(nvinfer1::plugin::GridAnchorParameters, int, nvinfer1::plugin::ReducedDivisor, float const *, float const *, float*)"
+"API calls",100.000000,18.030792,120,150.256000,35.209000,8936.070000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor copy"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,6874.464000,20,343.723000,65.627000,4949.789000,"GridAnchor copy"
+"GPU activities",100.000000,452.468000,20,22.623000,16.303000,57.555000,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,4452.540000,20,222.627000,50.261000,3119.960000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor_1 copy"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1794.050000,20,89.702000,52.397000,355.268000,"GridAnchor_1 copy"
+"GPU activities",100.000000,242.301000,20,12.115000,8.229000,32.448000,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1387.321000,20,69.366000,40.991000,282.142000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor_2 copy"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1768.320000,20,88.416000,50.939000,408.394000,"GridAnchor_2 copy"
+"GPU activities",100.000000,93.178000,20,4.658000,2.968000,11.876000,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1423.624000,20,71.181000,39.428000,333.080000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor_3 copy"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1786.496000,20,89.324000,49.115000,389.070000,"GridAnchor_3 copy"
+"GPU activities",100.000000,61.874000,20,3.093000,2.031000,8.438000,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1418.415000,20,70.920000,38.594000,313.757000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor_4 copy"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1694.311000,20,84.715000,47.761000,381.154000,"GridAnchor_4 copy"
+"GPU activities",100.000000,57.296000,20,2.864000,1.927000,7.812000,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1348.880000,20,67.444000,38.073000,308.913000,"cudaLaunchKernel"
+
+==12566==       Range "GridAnchor_5 copy"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,2099.365000,20,104.968000,46.407000,635.378000,"GridAnchor_5 copy"
+"GPU activities",100.000000,56.826000,20,2.841000,1.875000,7.761000,"void genericReformat::copyPackedKernel<float, __half, bool=1, bool=1, genericReformat::IdentityCoordMapper<int=4>, int=4>(unsigned int, unsigned int, void const *, genericReformat::ArrayN<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayNWithReducedDivisors<genericReformat::IdentityCoordMapper<int=4>>, genericReformat::ArrayN, int, int, int, float const *, void*, genericReformat::ArrayN, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayNWithReducedDivisors, genericReformat::ArrayN, int, int, int, float const , int=4)"
+"API calls",100.000000,1774.254000,20,88.712000,36.980000,593.189000,"cudaLaunchKernel"
+
+==12566==       Range "NMS"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,47.636086,20,2.381804,0.761787,29.460868,"NMS"
+"GPU activities",61.190524,125.438703,20,6.271935,3.528750,17.861463,"void allClassNMS_kernel<__half, __half, int=1>(int, int, int, int, float, bool, bool, __half*, __half*, int*, __half*, int*, bool, float)"
+"GPU activities",18.213042,37.336180,80,0.466702,0.044065,2.323435,"void cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>(cub::DeviceRadixSortPolicy<__half, int, int>::Policy700 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>*, bool=1 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>**, bool=1, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=1, bool=1, __half, int, int const *, int>**, int, int, int)"
+"GPU activities",10.939768,22.426189,40,0.560654,0.060731,2.684754,"void cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>(cub::DeviceRadixSortPolicy<__half, int, int>::Policy700 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>*, bool=0 const *, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>**, bool=1, cub::DeviceSegmentedRadixSortKernel<cub::DeviceRadixSortPolicy<__half, int, int>::Policy700, bool=0, bool=1, __half, int, int const *, int>**, int, int, int)"
+"GPU activities",5.607749,11.495714,20,0.574785,0.398559,1.556422,"void permuteData_kernel<__half, unsigned int=512>(int, int, int, int, bool, __half const *, __half*)"
+"GPU activities",3.086768,6.327780,20,0.316389,0.219176,0.855663,"void prepareSortData<__half, unsigned int=512>(int, int, int, int, float, __half*, __half*, __half, int*, int*)"
+"GPU activities",0.521472,1.069002,20,0.053450,0.048075,0.082556,"void gatherTopDetections_kernel<__half, __half, unsigned int=32>(bool, int, int, int, int, int, int const *, __half const *, __half const *, int*, __half*, __half)"
+"GPU activities",0.388133,0.795661,20,0.039783,0.028334,0.103963,"void decodeBBoxes_kernel<__half, unsigned int=512>(int, nvinfer1::plugin::CodeTypeSSD, bool, int, bool, int, int, bool, __half const *, __half const *, __half*, bool)"
+"GPU activities",0.030237,0.061984,20,0.003099,0.002240,0.006615,"void setUniformOffsets_kernel<unsigned int=32>(int, int, int*)"
+"GPU activities",0.022308,0.045730,20,0.002286,0.001718,0.004270,"[CUDA memset]"
+"API calls",95.149757,34.537747,240,0.143907,0.035053,4.531865,"cudaLaunchKernel"
+"API calls",4.850243,1.760556,20,0.088027,0.054480,0.414019,"cudaMemsetAsync"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_10/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,81.701270,20,4085.063000,74.272000,49.260182,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_10/project/Conv2D"
+"GPU activities",100.000000,6.273816,20,313.690000,125.058000,1.471678,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,5.854184,20,292.709000,49.793000,4.584313,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,3.859196,20,192.959000,57.501000,2.317027,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_11/depthwise/Relu6)"
+"GPU activities",100.000000,8.113847,20,405.692000,161.465000,1.908678,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,2.921778,20,146.088000,42.865000,1.755401,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_11/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_11/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,116.413495,20,5820.674000,69.376000,114.459861,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_11/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_11/add"
+"GPU activities",100.000000,10.566561,20,528.328000,184.383000,2.183377,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,3.740446,20,187.022000,49.012000,2.368070,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,2.670993,20,133.549000,50.886000,0.960645,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_12/depthwise/Relu6)"
+"GPU activities",100.000000,7.799773,20,389.988000,161.257000,1.910761,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,2.183276,20,109.163000,36.772000,0.924029,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_12/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_12/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.616025,20,80.801000,58.178000,0.186827,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_12/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_12/add"
+"GPU activities",100.000000,8.913830,20,445.691000,184.643000,2.181867,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.195128,20,59.756000,45.105000,0.141825,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.439871,20,71.993000,53.386000,0.170837,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_13/depthwise/Relu6)"
+"GPU activities",100.000000,6.308197,20,315.409000,161.570000,1.906803,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.069397,20,53.469000,39.740000,0.144430,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_13/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.708319,20,85.415000,59.116000,256.204000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_13/project/Conv2D"
+"GPU activities",100.000000,1.533139,20,76.656000,52.086000,205.530000,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.317630,20,65.881000,44.636000,222.140000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.504821,20,75.241000,50.522000,281.099000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_14/depthwise/Relu6)"
+"GPU activities",100.000000,2.237964,20,111.898000,75.889000,298.190000,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.180077,20,59.003000,38.907000,243.078000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_14/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_14/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.623835,20,81.191000,54.897000,174.847000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_14/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_14/add"
+"GPU activities",100.000000,2.477555,20,123.877000,85.785000,339.494000,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.187836,20,59.391000,41.199000,151.409000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.460603,20,73.030000,51.147000,253.390000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_15/depthwise/Relu6)"
+"GPU activities",100.000000,2.189470,20,109.473000,75.420000,298.399000,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.123775,20,56.188000,38.698000,223.338000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_15/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_15/add"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.642220,20,82.111000,58.855000,192.295000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_15/project/Conv2D + FeatureExtractor/MobilenetV2/expanded_conv_15/add"
+"GPU activities",100.000000,2.473336,20,123.666000,85.368000,339.598000,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.232210,20,61.610000,44.584000,159.951000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.476798,20,73.839000,53.074000,130.992000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/expanded_conv_16/depthwise/Relu6)"
+"GPU activities",100.000000,2.173589,20,108.679000,75.577000,297.617000,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.138355,20,56.917000,39.741000,116.565000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_16/project/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.772695,20,88.634000,54.793000,195.525000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/expanded_conv_16/project/Conv2D"
+"GPU activities",100.000000,2.470840,20,123.542000,85.525000,338.922000,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.244972,20,62.248000,40.938000,107.606000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1621.962000,20,81.098000,54.740000,198.702000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512/Relu6)"
+"GPU activities",100.000000,181.048000,20,9.052000,6.979000,16.564000,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1156.638000,20,57.831000,41.198000,144.534000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1822.901000,20,91.145000,50.887000,485.478000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_2_3x3_s2_512_depthwise/Relu6)"
+"GPU activities",100.000000,560.020000,20,28.001000,21.303000,50.836000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1411.905000,20,70.595000,38.698000,379.592000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1918.895000,20,95.944000,59.272000,555.584000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256/Relu6)"
+"GPU activities",100.000000,71.096000,20,3.554000,2.814000,5.677000,"void cuInt8::nchwToNchhw2<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1436.178000,20,71.808000,43.230000,426.415000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1702.903000,20,85.145000,53.126000,402.560000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_3_3x3_s2_256_depthwise/Relu6)"
+"GPU activities",100.000000,99.329000,20,4.966000,3.802000,8.803000,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1333.103000,20,66.655000,40.521000,302.714000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1713.263000,20,85.663000,57.136000,271.516000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256/Relu6)"
+"GPU activities",100.000000,61.251000,20,3.062000,2.500000,4.636000,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1251.743000,20,62.587000,42.292000,203.859000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1621.077000,20,81.053000,52.137000,349.330000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_4_3x3_s2_256_depthwise/Relu6)"
+"GPU activities",100.000000,50.731000,20,2.536000,1.771000,5.312000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1132.263000,20,56.613000,39.272000,268.130000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ns,,ns,ns,ns,
+"Range:",100.000000,119119.000000,20,5955.000000,3281.000000,29844.000000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Conv2D + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128/Relu6)"
+No kernels were profiled in this range.
+No API activities were profiled in this range.
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1906.131000,20,95.306000,55.262000,339.434000,"Reformatting CopyNode for Input Tensor 0 to FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/depthwise + PWN(FeatureExtractor/MobilenetV2/layer_19_2_Conv2d_5_3x3_s2_128_depthwise/Relu6)"
+"GPU activities",100.000000,59.587000,20,2.979000,2.345000,6.666000,"void cuInt8::nchhw2ToNchw<__half>(__half const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1513.367000,20,75.668000,41.668000,299.485000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 0 to GridAnchor"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,367997.071000,20,18399.853000,97.867000,285514.899000,"Reformatting CopyNode for Input Tensor 0 to GridAnchor"
+"GPU activities",100.000000,48.855000,20,2.442000,1.719000,6.719000,"[CUDA memcpy DtoD]"
+"API calls",100.000000,350996.615000,20,17549.830000,87.710000,279460.868000,"cudaMemcpy2DAsync"
+
+==12566==       Range "Reformatting CopyNode for Input Tensor 1 to NMS"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1621.648000,20,81.082000,50.626000,407.144000,"Reformatting CopyNode for Input Tensor 1 to NMS"
+"GPU activities",100.000000,264.960000,20,13.248000,8.698000,36.928000,"void cuInt8::nchwTonchw<float, __half, int=8>(float const *, __half*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1248.778000,20,62.438000,38.959000,308.913000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to BoxPredictor_0/BoxEncodingPredictor/Conv2D || BoxPredictor_0/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,3.780288,20,189.014000,59.220000,2394.476000,"Reformatting CopyNode for Output Tensor 0 to BoxPredictor_0/BoxEncodingPredictor/Conv2D || BoxPredictor_0/ClassPredictor/Conv2D"
+"GPU activities",100.000000,3.212015,20,160.600000,82.712000,967.595000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,2.961156,20,148.057000,44.688000,1894.987000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to BoxPredictor_1/BoxEncodingPredictor/Conv2D || BoxPredictor_1/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,2.068740,20,103.437000,51.981000,450.114000,"Reformatting CopyNode for Output Tensor 0 to BoxPredictor_1/BoxEncodingPredictor/Conv2D || BoxPredictor_1/ClassPredictor/Conv2D"
+"GPU activities",100.000000,1.335058,20,66.752000,47.085000,182.560000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1.348311,20,67.415000,39.793000,330.684000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to BoxPredictor_2/BoxEncodingPredictor/Conv2D || BoxPredictor_2/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1281.641000,20,64.082000,51.251000,131.044000,"Reformatting CopyNode for Output Tensor 0 to BoxPredictor_2/BoxEncodingPredictor/Conv2D || BoxPredictor_2/ClassPredictor/Conv2D"
+"GPU activities",100.000000,347.778000,20,17.388000,13.335000,30.835000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,960.805000,20,48.040000,38.959000,94.898000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to BoxPredictor_3/BoxEncodingPredictor/Conv2D || BoxPredictor_3/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,1531.229000,20,76.561000,54.845000,352.299000,"Reformatting CopyNode for Output Tensor 0 to BoxPredictor_3/BoxEncodingPredictor/Conv2D || BoxPredictor_3/ClassPredictor/Conv2D"
+"GPU activities",100.000000,161.724000,20,8.086000,6.094000,13.802000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1142.782000,20,57.139000,42.084000,268.078000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to BoxPredictor_4/BoxEncodingPredictor/Conv2D || BoxPredictor_4/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,2008.530000,20,100.426000,53.230000,520.896000,"Reformatting CopyNode for Output Tensor 0 to BoxPredictor_4/BoxEncodingPredictor/Conv2D || BoxPredictor_4/ClassPredictor/Conv2D"
+"GPU activities",100.000000,102.248000,20,5.112000,3.906000,8.439000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1584.772000,20,79.238000,39.793000,419.592000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to BoxPredictor_5/BoxEncodingPredictor/Conv2D || BoxPredictor_5/ClassPredictor/Conv2D"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,2745.110000,20,137.255000,58.178000,1043.511000,"Reformatting CopyNode for Output Tensor 0 to BoxPredictor_5/BoxEncodingPredictor/Conv2D || BoxPredictor_5/ClassPredictor/Conv2D"
+"GPU activities",100.000000,70.571000,20,3.528000,2.500000,7.500000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,1371.851000,20,68.592000,43.334000,228.234000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to NMS"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,3173.604000,20,158.680000,64.428000,1395.550000,"Reformatting CopyNode for Output Tensor 0 to NMS"
+"GPU activities",100.000000,123.497000,20,6.174000,4.948000,12.553000,"void cuInt8::nchwTonchw<__half, float, int=4>(__half const *, float*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,2697.922000,20,134.896000,47.500000,1363.622000,"cudaLaunchKernel"
+
+==12566==       Range "Reformatting CopyNode for Output Tensor 0 to concat_box_conf"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,4.078886,20,203.944000,61.824000,2393.539000,"Reformatting CopyNode for Output Tensor 0 to concat_box_conf"
+"GPU activities",100.000000,5.063818,20,253.190000,184.747000,708.052000,"void cuInt8::nchwTonchw<float, __half, int=8>(float const *, __half*, int, int, int, float const *, float const , cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,3.539289,20,176.964000,48.178000,2234.733000,"cudaLaunchKernel"
+
+==12566==       Range "Squeeze"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,7923.129000,20,396.156000,257.349000,1746.338000,"Squeeze"
+"GPU activities",100.000000,305.789000,120,2.548000,1.093000,12.761000,"void copy_kernel<float>(cublasCopyParams<float>)"
+"API calls",100.000000,6498.994000,120,54.158000,33.855000,401.102000,"cudaLaunchKernel"
+
+==12566==       Range "concat_box_conf"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,343.913083,20,17195.654000,293.340000,257442.654000,"concat_box_conf"
+"GPU activities",100.000000,3.121084,120,26.009000,1.510000,219.228000,"void copy_kernel<float>(cublasCopyParams<float>)"
+"API calls",100.000000,15.231513,120,126.929000,34.584000,6757.796000,"cudaLaunchKernel"
+

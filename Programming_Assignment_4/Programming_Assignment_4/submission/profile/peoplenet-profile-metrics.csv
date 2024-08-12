@@ -1,0 +1,18 @@
+Err:510, command: ./detectnet --network=peoplenet images/myimages/*.jpg images/peoplenet-output/out_%i.jpg,,,,,,,
+Err:501,,,,,,,,
+Err:510,,,,,,,,
+Err:510,,,,,,,,
+Device,Kernel,Invocations,Metric Name,Metric Description,Min,Max,Avg,
+NVIDIA Tegra X1 (0),"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)",20,sm_efficiency,Multiprocessor Activity,99.891195%,99.899265%,99.896161%,
+NVIDIA Tegra X1 (0),generatedNativePointwise,20,sm_efficiency,Multiprocessor Activity,76.658768%,87.903109%,80.758906%,shortest time
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1,40,sm_efficiency,Multiprocessor Activity,99.204239%,99.304715%,99.249243%,
+NVIDIA Tegra X1 (0),"void gpuTensorNorm<uchar3, bool=0>(float2, uchar3*, int, float*, int, int, float, float)",20,sm_efficiency,Multiprocessor Activity,93.511825%,99.967617%,99.127701%,
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1,200,sm_efficiency,Multiprocessor Activity,91.973010%,99.890209%,99.745560%,
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1,40,sm_efficiency,Multiprocessor Activity,97.297573%,99.944375%,99.704181%,
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1,580,sm_efficiency,Multiprocessor Activity,89.181447%,99.990102%,99.543529%,longest time
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1,100,sm_efficiency,Multiprocessor Activity,93.723607%,99.940988%,99.770157%,
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_medium_nn_v1,20,sm_efficiency,Multiprocessor Activity,81.318752%,99.983777%,94.276503%,
+NVIDIA Tegra X1 (0),"void gpuDetectionOverlayBox<uchar3>(uchar3*, uchar3*, int, int, int, int, int, int, float4)",28,sm_efficiency,Multiprocessor Activity,81.333333%,99.970893%,95.909510%,
+NVIDIA Tegra X1 (0),"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)",40,sm_efficiency,Multiprocessor Activity,74.396442%,91.652044%,83.184710%,
+NVIDIA Tegra X1 (0),"void gpuOverlayText<uchar3>(unsigned char*, int, GlyphCommand*, uchar3*, uchar3*, int, int, float4)",28,sm_efficiency,Multiprocessor Activity,93.034556%,98.158244%,97.151146%,
+NVIDIA Tegra X1 (0),trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1,40,sm_efficiency,Multiprocessor Activity,87.319869%,99.973490%,98.843125%,

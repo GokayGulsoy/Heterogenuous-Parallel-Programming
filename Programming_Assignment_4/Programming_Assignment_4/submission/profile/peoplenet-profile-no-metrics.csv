@@ -1,0 +1,475 @@
+==15124== NVPROF is profiling process 15124, command: ./detectnet --network=peoplenet images/myimages/*.jpg images/peoplenet-output/out_%i.jpg
+==15124== Warning: Unified Memory Profiling is not supported on the underlying platform. System requirements for unified memory can be found at: http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#um-requirements
+==15124== Profiling application: ./detectnet --network=peoplenet images/myimages/*.jpg images/peoplenet-output/out_%i.jpg
+==15124== Profiling result:
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,s,,ms,ms,ms,
+"GPU activities",71.297158,4.677218,580,8.064168,4.728897,63.049654,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"GPU activities",8.011500,0.525568,20,26.278417,10.474515,157.991628,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_medium_nn_v1"
+"GPU activities",4.683721,0.307260,40,7.681507,3.226265,93.566744,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"GPU activities",3.335548,0.218818,100,2.188177,1.158604,16.780735,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"GPU activities",2.866402,0.188041,200,0.940204,0.488099,2.139333,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"GPU activities",2.219035,0.145573,20,7.278629,4.478571,20.446921,"void gpuTensorNorm<uchar3, bool=0>(float2, uchar3*, int, float*, int, int, float, float)"
+"GPU activities",1.716958,0.112635,102,1.104268,0.016512,7.335129,"[CUDA memcpy DtoD]"
+"GPU activities",1.521809,0.099833,20,4.991666,1.850880,31.438182,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",1.380879,0.090588,11,8.235276,0.004427,71.747616,"[CUDA memset]"
+"GPU activities",1.294655,0.084932,40,2.123291,0.639044,7.377736,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"GPU activities",0.907225,0.059516,7,8.502223,0.001979,59.490402,"[CUDA memcpy HtoD]"
+"GPU activities",0.575016,0.037722,28,1.347216,0.012188,5.548889,"void gpuDetectionOverlayBox<uchar3>(uchar3*, uchar3*, int, int, int, int, int, int, float4)"
+"GPU activities",0.146086,0.009583,40,0.239586,0.218293,0.346425,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"GPU activities",0.033044,0.002168,28,0.077420,0.055472,0.093026,"void gpuOverlayText<uchar3>(unsigned char*, int, GlyphCommand*, uchar3*, uchar3*, int, int, float4)"
+"GPU activities",0.008604,0.000564,40,0.014110,0.006198,0.027814,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.002360,0.000155,20,0.007740,0.007500,0.009063,"generatedNativePointwise"
+"API calls",48.815541,22.665885,16,1416.617831,0.005209,22459.211114,"cudaStreamCreateWithFlags"
+"API calls",12.416581,5.765229,24,240.217892,0.013646,709.934441,"cudaStreamSynchronize"
+"API calls",11.304325,5.248790,10,524.879016,0.012501,5178.829823,"cudaMemGetInfo"
+"API calls",9.729133,4.517402,43,105.055854,0.002500,2547.064995,"cudaFree"
+"API calls",6.289205,2.920185,26,112.314804,0.022136,1749.610491,"cudaMalloc"
+"API calls",3.026793,1.405391,30,46.846382,0.040730,1233.607802,"cudaHostAlloc"
+"API calls",2.374598,1.102566,77,14.319041,0.014740,182.090168,"cuModuleUnload"
+"API calls",2.203824,1.023273,1156,0.885184,0.034585,207.952857,"cudaLaunchKernel"
+"API calls",0.736997,0.342200,6,57.033348,0.116046,279.432630,"cudaMemcpy"
+"API calls",0.690461,0.320593,10,32.059279,0.021407,283.826612,"cudaMemsetAsync"
+"API calls",0.650054,0.301831,103,2.930401,0.043699,185.280080,"cudaMemcpyAsync"
+"API calls",0.531237,0.246662,20,12.333124,0.576685,205.697577,"cudaGraphicsGLRegisterBuffer"
+"API calls",0.278373,0.129253,222,0.582222,0.001302,43.164766,"cudaDeviceGetAttribute"
+"API calls",0.187655,0.087131,16,5.445708,0.002187,35.722923,"cudaGetDevice"
+"API calls",0.128702,0.059759,34,1.757603,0.005417,41.115017,"cudaDeviceSynchronize"
+"API calls",0.124852,0.057971,26,2.229651,0.005730,29.717006,"cudaStreamDestroy"
+"API calls",0.102137,0.047424,661,0.071745,0.000572,27.090215,"cuDeviceGetAttribute"
+"API calls",0.073456,0.034107,1,34.106778,34.106778,34.106778,"cudaMemset"
+"API calls",0.071621,0.033255,8,4.156873,0.005105,32.704499,"cudaStreamCreateWithPriority"
+"API calls",0.061216,0.028424,144,0.197386,0.002500,25.718089,"cudaEventCreateWithFlags"
+"API calls",0.056686,0.026320,6,4.386688,0.000729,26.308779,"cudaRuntimeGetVersion"
+"API calls",0.035811,0.016628,10,1.662769,0.026615,12.611691,"cudaGetDeviceProperties"
+"API calls",0.024996,0.011606,27,0.429847,0.042136,3.332915,"cudaFreeHost"
+"API calls",0.022167,0.010292,144,0.071474,0.001875,7.852324,"cudaEventDestroy"
+"API calls",0.017932,0.008326,152,0.054776,0.007136,2.219027,"cudaEventRecord"
+"API calls",0.012197,0.005664,1134,0.004994,0.000677,2.090533,"cudaGetLastError"
+"API calls",0.011100,0.005154,6,0.859002,0.004949,4.755459,"cuInit"
+"API calls",0.007791,0.003618,20,0.180875,0.041616,2.645394,"cuLaunchKernel"
+"API calls",0.005638,0.002618,1,2.617893,2.617893,2.617893,"cuModuleLoadData"
+"API calls",0.003599,0.001671,2,0.835442,0.072711,1.598174,"cudaStreamCreate"
+"API calls",0.002075,0.000964,66,0.014598,0.006302,0.075940,"cudaEventElapsedTime"
+"API calls",0.000672,0.000312,7,0.044562,0.001667,0.244330,"cuDeviceGetName"
+"API calls",0.000598,0.000277,30,0.009248,0.004167,0.030783,"cudaHostGetDevicePointer"
+"API calls",0.000553,0.000257,6,0.042779,0.003229,0.141359,"cuDriverGetVersion"
+"API calls",0.000519,0.000241,26,0.009273,0.001875,0.093649,"cudaGetErrorString"
+"API calls",0.000333,0.000155,7,0.022076,0.007552,0.049220,"cuDeviceTotalMem"
+"API calls",0.000162,0.000075,8,0.009388,0.003386,0.048387,"cudaEventCreate"
+"API calls",0.000161,0.000075,2,0.037371,0.006823,0.067919,"cudaDeviceGetStreamPriorityRange"
+"API calls",0.000098,0.000045,8,0.005664,0.000781,0.033960,"cudaGetDeviceCount"
+"API calls",0.000069,0.000032,9,0.003547,0.001406,0.009792,"cuDeviceGetCount"
+"API calls",0.000034,0.000016,8,0.001973,0.001042,0.005417,"cuDeviceGet"
+"API calls",0.000018,0.000008,2,0.004244,0.001041,0.007448,"cudaDriverGetVersion"
+"API calls",0.000015,0.000007,7,0.001012,0.000729,0.001875,"cuDeviceGetUuid"
+"API calls",0.000009,0.000004,1,0.004167,0.004167,0.004167,"cuDevicePrimaryCtxRelease"
+"API calls",0.000009,0.000004,1,0.004010,0.004010,0.004010,"cuModuleGetFunction"
+
+==15124== NVTX result:
+==15124==   Thread "<unnamed>" (id = 2467778576)
+==15124==     Domain "TensorRT"
+==15124==       Range "ExecutionContext::execute"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,s,,ms,ms,ms,
+"Range:",100.000000,8.252695,20,412.634745,270.925713,2341.716272,"ExecutionContext::execute"
+"GPU activities",76.040955,4.677218,580,8.064168,4.728897,63.049654,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"GPU activities",8.544549,0.525568,20,26.278417,10.474515,157.991628,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_medium_nn_v1"
+"GPU activities",4.995355,0.307260,40,7.681507,3.226265,93.566744,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"GPU activities",3.557481,0.218818,100,2.188177,1.158604,16.780735,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"GPU activities",3.057119,0.188041,200,0.940204,0.488099,2.139333,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"GPU activities",1.623064,0.099833,20,4.991666,1.850880,31.438182,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",1.380796,0.084932,40,2.123291,0.639044,7.377736,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"GPU activities",0.633183,0.038947,51,0.763657,0.016512,3.879477,"[CUDA memcpy DtoD]"
+"GPU activities",0.155806,0.009583,40,0.239586,0.218293,0.346425,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"GPU activities",0.009176,0.000564,40,0.014110,0.006198,0.027814,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"GPU activities",0.002517,0.000155,20,0.007740,0.007500,0.009063,"generatedNativePointwise"
+"API calls",95.924501,1.002348,1080,0.928100,0.035470,207.952857,"cudaLaunchKernel"
+"API calls",3.729305,0.038969,51,0.764094,0.043699,32.818979,"cudaMemcpyAsync"
+"API calls",0.346194,0.003618,20,0.180875,0.041616,2.645394,"cuLaunchKernel"
+
+==15124==       Range "PWN(output_cov/Sigmoid)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,81420.007000,20,4071.000000,54.273000,80163.925000,"PWN(output_cov/Sigmoid)"
+"GPU activities",100.000000,154.800000,20,7.740000,7.500000,9.063000,"generatedNativePointwise"
+"API calls",100.000000,3617.506000,20,180.875000,41.616000,2645.394000,"cuLaunchKernel"
+
+==15124==       Range "Reformatting CopyNode for Input Tensor 0 to PWN(output_cov/Sigmoid)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,31458.727000,20,1572.936000,54.377000,30177.281000,"Reformatting CopyNode for Input Tensor 0 to PWN(output_cov/Sigmoid)"
+"GPU activities",100.000000,128.444000,20,6.422000,6.198000,8.178000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,31117.831000,20,1555.891000,41.199000,30145.561000,"cudaLaunchKernel"
+
+==15124==       Range "Reformatting CopyNode for Input Tensor 0 to conv1/convolution + PWN(activation_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,334.472477,20,16.723623,0.113128,331.005915,"Reformatting CopyNode for Input Tensor 0 to conv1/convolution + PWN(activation_1/Relu6)"
+"GPU activities",100.000000,99.833329,20,4.991666,1.850880,31.438182,"void cuInt8::nchwToNchhw2<float>(float const *, __half*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,196.712511,20,9.835625,0.079013,194.100348,"cudaLaunchKernel"
+
+==15124==       Range "Reformatting CopyNode for Output Tensor 0 to output_bbox/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,us,,us,us,us,
+"Range:",100.000000,66916.069000,20,3345.803000,64.064000,65400.084000,"Reformatting CopyNode for Output Tensor 0 to output_bbox/convolution"
+"GPU activities",100.000000,435.961000,20,21.798000,21.199000,27.814000,"void cuInt8::nchhw2ToNchw<float>(__half const *, float*, int, int, int, int, int, int, cuInt8::ReducedDivisorParameters)"
+"API calls",100.000000,6277.485000,20,313.874000,45.626000,5235.890000,"cudaLaunchKernel"
+
+==15124==       Range "block_1a_conv_1/convolution + PWN(block_1a_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,32.359221,20,1.617961,0.061668,30.123635,"block_1a_conv_1/convolution + PWN(block_1a_relu_1/Relu6)"
+"GPU activities",100.000000,230.753774,20,11.537688,6.322784,93.566744,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,8.490262,20,0.424513,0.045053,7.407624,"cudaLaunchKernel"
+
+==15124==       Range "block_1a_conv_2/convolution + add_1/add + PWN(block_1a_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,100.577467,20,5.028873,0.053803,99.367119,"block_1a_conv_2/convolution + add_1/add + PWN(block_1a_relu/Relu6)"
+"GPU activities",100.000000,184.578877,20,9.228943,5.279135,63.049654,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,73.183294,20,3.659164,0.042970,72.215556,"cudaLaunchKernel"
+
+==15124==       Range "block_1a_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,146.923950,20,7.346197,0.061669,145.416818,"block_1a_conv_shortcut/convolution"
+"GPU activities",100.000000,44.587633,20,2.229381,1.275172,16.780735,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"API calls",100.000000,112.675549,20,5.633777,0.046199,111.541556,"cudaLaunchKernel"
+
+==15124==       Range "block_1b_conv_1/convolution + PWN(block_1b_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.463743,20,0.073187,0.049533,0.330271,"block_1b_conv_1/convolution + PWN(block_1b_relu_1/Relu6)"
+"GPU activities",100.000000,121.724798,20,6.086239,4.771190,13.183982,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.199622,20,0.059981,0.040262,0.260998,"cudaLaunchKernel"
+
+==15124==       Range "block_1b_conv_2/convolution + add_2/add + PWN(block_1b_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.121649,20,0.056082,0.049168,0.106774,"block_1b_conv_2/convolution + add_2/add + PWN(block_1b_relu/Relu6)"
+"GPU activities",100.000000,127.919353,20,6.395967,5.281947,13.276071,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.906384,20,0.045319,0.039064,0.088128,"cudaLaunchKernel"
+
+==15124==       Range "block_1b_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.908601,20,0.095430,0.054064,0.705073,"block_1b_conv_shortcut/convolution"
+"GPU activities",100.000000,29.028894,20,1.451444,1.158604,3.307832,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"API calls",100.000000,1.585932,20,0.079296,0.041511,0.684344,"cudaLaunchKernel"
+
+==15124==       Range "block_1c_conv_1/convolution + PWN(block_1c_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,3.417136,20,0.170856,0.046564,1.824327,"block_1c_conv_1/convolution + PWN(block_1c_relu_1/Relu6)"
+"GPU activities",100.000000,111.709637,20,5.585481,4.728897,11.168614,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.948262,20,0.047413,0.037762,0.100212,"cudaLaunchKernel"
+
+==15124==       Range "block_1c_conv_2/convolution + add_3/add + PWN(block_1c_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.265039,20,0.063251,0.048387,0.168130,"block_1c_conv_2/convolution + add_3/add + PWN(block_1c_relu/Relu6)"
+"GPU activities",100.000000,120.950441,20,6.047522,5.276062,11.297111,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.999510,20,0.049975,0.038335,0.127192,"cudaLaunchKernel"
+
+==15124==       Range "block_1c_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,23.341291,20,1.167064,0.051460,22.041042,"block_1c_conv_shortcut/convolution"
+"GPU activities",100.000000,27.227280,20,1.361364,1.164646,2.667120,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"API calls",100.000000,1.129461,20,0.056473,0.039585,0.113545,"cudaLaunchKernel"
+
+==15124==       Range "block_2a_conv_1/convolution + PWN(block_2a_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,2.015530,20,0.100776,0.052814,0.600800,"block_2a_conv_1/convolution + PWN(block_2a_relu_1/Relu6)"
+"GPU activities",100.000000,76.506510,20,3.825325,3.226265,8.152412,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_small_nn_v1"
+"API calls",100.000000,1.684531,20,0.084226,0.040418,0.583142,"cudaLaunchKernel"
+
+==15124==       Range "block_2a_conv_2/convolution + add_4/add + PWN(block_2a_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.300402,20,0.065020,0.047502,0.163182,"block_2a_conv_2/convolution + add_4/add + PWN(block_2a_relu/Relu6)"
+"GPU activities",100.000000,119.200302,20,5.960015,5.123554,10.767083,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.053731,20,0.052686,0.038022,0.134014,"cudaLaunchKernel"
+
+==15124==       Range "block_2a_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,180.610609,20,9030.530000,56.616000,179.266505,"block_2a_conv_shortcut/convolution"
+"GPU activities",100.000000,14.642809,20,732.140000,639.044000,1.381115,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"API calls",100.000000,142.992888,20,7149.644000,44.012000,141.929783,"cudaLaunchKernel"
+
+==15124==       Range "block_2b_conv_1/convolution + PWN(block_2b_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.181548,20,0.059077,0.045991,0.161880,"block_2b_conv_1/convolution + PWN(block_2b_relu_1/Relu6)"
+"GPU activities",100.000000,113.193356,20,5.659667,4.949013,10.695724,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.967479,20,0.048373,0.037241,0.134067,"cudaLaunchKernel"
+
+==15124==       Range "block_2b_conv_2/convolution + add_5/add + PWN(block_2b_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,7.263189,20,0.363159,0.047397,6.049664,"block_2b_conv_2/convolution + add_5/add + PWN(block_2b_relu/Relu6)"
+"GPU activities",100.000000,114.089083,20,5.704454,5.101104,10.561552,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.029142,20,0.051457,0.038022,0.145421,"cudaLaunchKernel"
+
+==15124==       Range "block_2b_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,116.561293,20,5.828064,55.627000,115.154584,"block_2b_conv_shortcut/convolution"
+"GPU activities",100.000000,20.751464,20,1.037573,907.496000,2.091310,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,62.256552,20,3.112827,43.022000,61.168913,"cudaLaunchKernel"
+
+==15124==       Range "block_2c_conv_1/convolution + PWN(block_2c_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.666093,20,0.083304,0.046981,0.392928,"block_2c_conv_1/convolution + PWN(block_2c_relu_1/Relu6)"
+"GPU activities",100.000000,110.371023,20,5.518551,4.949013,10.478630,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.407855,20,0.070392,0.037449,0.380949,"cudaLaunchKernel"
+
+==15124==       Range "block_2c_conv_2/convolution + add_6/add + PWN(block_2c_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.734899,20,0.086744,0.047866,0.610331,"block_2c_conv_2/convolution + add_6/add + PWN(block_2c_relu/Relu6)"
+"GPU activities",100.000000,113.391961,20,5.669598,5.119647,10.558790,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.503692,20,0.075184,0.038803,0.587258,"cudaLaunchKernel"
+
+==15124==       Range "block_2c_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,1.377907,20,0.068895,50.991000,0.189224,"block_2c_conv_shortcut/convolution"
+"GPU activities",100.000000,20.837937,20,1.041896,908.225000,2.071933,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.066333,20,0.053316,39.115000,0.152713,"cudaLaunchKernel"
+
+==15124==       Range "block_2d_conv_1/convolution + PWN(block_2d_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,34.935759,20,1.746787,0.046928,33.831197,"block_2d_conv_1/convolution + PWN(block_2d_relu_1/Relu6)"
+"GPU activities",100.000000,109.937824,20,5.496891,4.932241,10.493683,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,34.694088,20,1.734704,0.038022,33.815674,"cudaLaunchKernel"
+
+==15124==       Range "block_2d_conv_2/convolution + add_7/add + PWN(block_2d_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.466709,20,0.073335,0.046824,0.404595,"block_2d_conv_2/convolution + add_7/add + PWN(block_2d_relu/Relu6)"
+"GPU activities",100.000000,113.399363,20,5.669968,5.114699,10.559833,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.898986,20,0.044949,0.037710,0.061148,"cudaLaunchKernel"
+
+==15124==       Range "block_2d_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,us,ms,
+"Range:",100.000000,1.422651,20,0.071132,52.294000,0.200631,"block_2d_conv_shortcut/convolution"
+"GPU activities",100.000000,20.741467,20,1.037073,908.069000,2.077506,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.133522,20,0.056676,40.626000,0.185162,"cudaLaunchKernel"
+
+==15124==       Range "block_3a_conv_1/convolution + PWN(block_3a_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.339937,20,0.066996,0.053388,0.175787,"block_3a_conv_1/convolution + PWN(block_3a_relu_1/Relu6)"
+"GPU activities",100.000000,70.288844,20,3.514442,3.036360,7.377736,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_small_nn_v1"
+"API calls",100.000000,1.072531,20,0.053626,0.041668,0.161932,"cudaLaunchKernel"
+
+==15124==       Range "block_3a_conv_2/convolution + add_8/add + PWN(block_3a_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.102012,20,0.055100,0.047606,0.079065,"block_3a_conv_2/convolution + add_8/add + PWN(block_3a_relu/Relu6)"
+"GPU activities",100.000000,112.595047,20,5.629752,5.036257,10.727653,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.867631,20,0.043381,0.037970,0.053075,"cudaLaunchKernel"
+
+==15124==       Range "block_3a_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.163108,20,58.155000,49.949000,0.071565,"block_3a_conv_shortcut/convolution"
+"GPU activities",100.000000,10.968969,20,548.448000,488.099000,1.071880,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,0.903830,20,45.191000,39.064000,0.055627,"cudaLaunchKernel"
+
+==15124==       Range "block_3b_conv_1/convolution + PWN(block_3b_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,43.107839,20,2.155391,0.043960,42.094316,"block_3b_conv_1/convolution + PWN(block_3b_relu_1/Relu6)"
+"GPU activities",100.000000,108.393418,20,5.419670,4.888333,9.699369,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.885494,20,0.044274,0.035470,0.076096,"cudaLaunchKernel"
+
+==15124==       Range "block_3b_conv_2/convolution + add_9/add + PWN(block_3b_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.600570,20,0.080028,0.046147,0.459493,"block_3b_conv_2/convolution + add_9/add + PWN(block_3b_relu/Relu6)"
+"GPU activities",100.000000,105.863597,20,5.293179,5.058290,6.297887,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.388690,20,0.069434,0.036772,0.445743,"cudaLaunchKernel"
+
+==15124==       Range "block_3b_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.259361,20,62.968000,50.210000,0.138962,"block_3b_conv_shortcut/convolution"
+"GPU activities",100.000000,16.857823,20,842.891000,770.979000,1.503152,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,0.970398,20,48.519000,38.960000,0.106410,"cudaLaunchKernel"
+
+==15124==       Range "block_3c_conv_1/convolution + PWN(block_3c_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.267436,20,0.063371,0.045782,0.131306,"block_3c_conv_1/convolution + PWN(block_3c_relu_1/Relu6)"
+"GPU activities",100.000000,102.217724,20,5.110886,4.854685,6.181318,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.042009,20,0.052100,0.036668,0.106618,"cudaLaunchKernel"
+
+==15124==       Range "block_3c_conv_2/convolution + add_10/add + PWN(block_3c_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,34.364490,20,1.718224,0.047918,33.189197,"block_3c_conv_2/convolution + add_10/add + PWN(block_3c_relu/Relu6)"
+"GPU activities",100.000000,103.804690,20,5.190234,4.987296,6.238509,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,34.123864,20,1.706193,0.038230,33.171436,"cudaLaunchKernel"
+
+==15124==       Range "block_3c_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,3.632143,20,181.607000,51.200000,2.016885,"block_3c_conv_shortcut/convolution"
+"GPU activities",100.000000,16.512024,20,825.601000,768.061000,1.141207,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.393166,20,69.658000,39.688000,0.519495,"cudaLaunchKernel"
+
+==15124==       Range "block_3d_conv_1/convolution + PWN(block_3d_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.224726,20,0.061236,0.044949,0.138337,"block_3d_conv_1/convolution + PWN(block_3d_relu_1/Relu6)"
+"GPU activities",100.000000,103.555919,20,5.177795,4.952502,6.128295,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.947320,20,0.047366,0.036616,0.095523,"cudaLaunchKernel"
+
+==15124==       Range "block_3d_conv_2/convolution + add_11/add + PWN(block_3d_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.273214,20,0.063660,0.047866,0.130264,"block_3d_conv_2/convolution + add_11/add + PWN(block_3d_relu/Relu6)"
+"GPU activities",100.000000,103.207465,20,5.160373,4.971253,6.218611,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.034771,20,0.051738,0.038387,0.115785,"cudaLaunchKernel"
+
+==15124==       Range "block_3d_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,3.909026,20,195.451000,51.304000,2.218818,"block_3d_conv_shortcut/convolution"
+"GPU activities",100.000000,16.404622,20,820.231000,772.437000,1.020575,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,3.104265,20,155.213000,39.273000,2.197724,"cudaLaunchKernel"
+
+==15124==       Range "block_3e_conv_1/convolution + PWN(block_3e_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,22.796378,20,1.139818,0.046459,21.420814,"block_3e_conv_1/convolution + PWN(block_3e_relu_1/Relu6)"
+"GPU activities",100.000000,101.763020,20,5.088151,4.892135,6.179548,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.087326,20,0.054366,0.037136,0.180474,"cudaLaunchKernel"
+
+==15124==       Range "block_3e_conv_2/convolution + add_12/add + PWN(block_3e_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,20.169058,20,1.008452,0.047918,18.981157,"block_3e_conv_2/convolution + add_12/add + PWN(block_3e_relu/Relu6)"
+"GPU activities",100.000000,103.833382,20,5.191669,5.018600,6.215122,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,1.095449,20,0.054772,0.038387,0.124848,"cudaLaunchKernel"
+
+==15124==       Range "block_3e_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,2.519454,20,125.972000,51.564000,1.044303,"block_3e_conv_shortcut/convolution"
+"GPU activities",100.000000,16.471344,20,823.567000,771.083000,1.020679,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.175036,20,58.751000,39.585000,0.154796,"cudaLaunchKernel"
+
+==15124==       Range "block_3f_conv_1/convolution + PWN(block_3f_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,3.207698,20,0.160384,0.045522,2.145535,"block_3f_conv_1/convolution + PWN(block_3f_relu_1/Relu6)"
+"GPU activities",100.000000,101.842600,20,5.092130,4.864113,6.046416,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.903204,20,0.045160,0.036616,0.075523,"cudaLaunchKernel"
+
+==15124==       Range "block_3f_conv_2/convolution + add_13/add + PWN(block_3f_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.121546,20,0.056077,0.046928,0.080836,"block_3f_conv_2/convolution + add_13/add + PWN(block_3f_relu/Relu6)"
+"GPU activities",100.000000,104.535239,20,5.226761,5.040320,6.390340,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.890860,20,0.044543,0.037657,0.058543,"cudaLaunchKernel"
+
+==15124==       Range "block_3f_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,ms,
+"Range:",100.000000,1.356917,20,67.845000,52.450000,0.128285,"block_3f_conv_shortcut/convolution"
+"GPU activities",100.000000,16.369882,20,818.494000,771.083000,1.022607,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.065447,20,53.272000,40.105000,0.102503,"cudaLaunchKernel"
+
+==15124==       Range "block_4a_conv_1/convolution + PWN(block_4a_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.043936,20,0.052196,0.046199,0.070054,"block_4a_conv_1/convolution + PWN(block_4a_relu_1/Relu6)"
+"GPU activities",100.000000,204.756097,20,10.237804,9.835940,12.221170,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.838361,20,0.041918,0.037188,0.059846,"cudaLaunchKernel"
+
+==15124==       Range "block_4a_conv_2/convolution + add_14/add + PWN(block_4a_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.085761,20,0.054288,0.046460,0.066408,"block_4a_conv_2/convolution + add_14/add + PWN(block_4a_relu/Relu6)"
+"GPU activities",100.000000,373.622987,20,18.681149,17.853813,22.953512,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.876068,20,0.043803,0.036981,0.054793,"cudaLaunchKernel"
+
+==15124==       Range "block_4a_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.498642,20,0.074932,0.050627,0.370324,"block_4a_conv_shortcut/convolution"
+"GPU activities",100.000000,32.125408,20,1.606270,1.530863,2.139333,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x128_relu_interior_nn_v1"
+"API calls",100.000000,1.238631,20,0.061931,0.039220,0.357303,"cudaLaunchKernel"
+
+==15124==       Range "block_4b_conv_1/convolution + PWN(block_4b_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.116233,20,0.055811,0.045679,0.082398,"block_4b_conv_1/convolution + PWN(block_4b_relu_1/Relu6)"
+"GPU activities",100.000000,369.916698,20,18.495834,17.761205,22.813296,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.920444,20,0.046022,0.037033,0.073075,"cudaLaunchKernel"
+
+==15124==       Range "block_4b_conv_2/convolution + add_15/add + PWN(block_4b_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.167381,20,0.058369,0.047606,0.130265,"block_4b_conv_2/convolution + add_15/add + PWN(block_4b_relu/Relu6)"
+"GPU activities",100.000000,372.441676,20,18.622083,17.866679,23.085967,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.954978,20,0.047748,0.037501,0.115212,"cudaLaunchKernel"
+
+==15124==       Range "block_4b_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.341034,20,0.067051,0.053856,0.104170,"block_4b_conv_shortcut/convolution"
+"GPU activities",100.000000,59.009909,20,2.950495,2.848017,3.883019,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"API calls",100.000000,1.038264,20,0.051913,0.041356,0.082086,"cudaLaunchKernel"
+
+==15124==       Range "block_4c_conv_1/convolution + PWN(block_4c_relu_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,2.236526,20,0.111826,0.045991,0.618560,"block_4c_conv_1/convolution + PWN(block_4c_relu_1/Relu6)"
+"GPU activities",100.000000,370.790908,20,18.539545,17.939599,22.836839,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,2.021884,20,0.101094,0.037136,0.606008,"cudaLaunchKernel"
+
+==15124==       Range "block_4c_conv_2/convolution + add_16/add + PWN(block_4c_relu/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.124667,20,0.056233,0.046511,0.122764,"block_4c_conv_2/convolution + add_16/add + PWN(block_4c_relu/Relu6)"
+"GPU activities",100.000000,373.611368,20,18.680568,17.914651,23.890801,"trt_maxwell_fp16x2_hcudnn_winograd_fp16x2_128x128_ldg1_ldg4_relu_tile148m_nt_v1"
+"API calls",100.000000,0.882371,20,0.044118,0.036251,0.089221,"cudaLaunchKernel"
+
+==15124==       Range "block_4c_conv_shortcut/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,1.281648,20,0.064082,0.050679,0.140629,"block_4c_conv_shortcut/convolution"
+"GPU activities",100.000000,58.964064,20,2.948203,2.845723,3.876561,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_interior_nn_v1"
+"API calls",100.000000,0.982530,20,0.049126,0.038804,0.109482,"cudaLaunchKernel"
+
+==15124==       Range "conv1/convolution + PWN(activation_1/Relu6)"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"Range:",100.000000,365.397021,20,18.269851,0.086825,363.525508,"conv1/convolution + PWN(activation_1/Relu6)"
+"GPU activities",100.000000,525.568353,20,26.278417,10.474515,157.991628,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x64_relu_medium_nn_v1"
+"API calls",100.000000,209.220971,20,10.461048,0.058908,207.952857,"cudaLaunchKernel"
+
+==15124==       Range "output_bbox/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,42.958041,20,2147.902000,56.512000,41069.857000,"output_bbox/convolution"
+"GPU activities",100.000000,5.017194,20,250.859000,236.888000,346.425000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"API calls",100.000000,42.033794,20,2101.689000,43.804000,41033.814000,"cudaLaunchKernel"
+
+==15124==       Range "output_cov/convolution"
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,us,us,us,
+"Range:",100.000000,1.776930,20,88.846000,54.637000,522.985000,"output_cov/convolution"
+"GPU activities",100.000000,4.566284,20,228.314000,218.293000,293.557000,"trt_maxwell_fp16x2_hcudnn_fp16x2_128x32_relu_interior_nn_v1"
+"API calls",100.000000,1.473949,20,73.697000,42.241000,506.890000,"cudaLaunchKernel"
+
